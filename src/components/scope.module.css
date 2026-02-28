@@ -37,21 +37,9 @@
 
 .timeline {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
     margin-bottom: 6rem;
-}
-
-@media (max-width: 1024px) {
-    .timeline {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .timeline {
-        grid-template-columns: 1fr;
-    }
 }
 
 .timelineItem {
@@ -84,7 +72,6 @@
     color: var(--card-text);
     margin-bottom: 1.5rem;
     padding-left: 1.25rem;
-    font-family: var(--font-sans);
 }
 
 .itemList {
