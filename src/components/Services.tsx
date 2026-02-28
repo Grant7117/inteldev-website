@@ -45,10 +45,11 @@ const SERVICES = [
     }
 ];
 
-export default function Services({ paddingTop = '6rem', paddingBottom = '3rem', showContainer = true }: { paddingTop?: string, paddingBottom?: string, showContainer?: boolean } = {}) {
+export default function Services({ paddingTop = '6rem', paddingBottom = '3rem', showContainer = true, columns = 3 }: { paddingTop?: string, paddingBottom?: string, showContainer?: boolean, columns?: number } = {}) {
+    const gridClass = columns === 4 ? styles.cardsColumn4 : styles.cardsColumn;
     const content = (
         <div className={styles.grid}>
-            <div className={styles.cardsColumn}>
+            <div className={gridClass}>
                 {SERVICES.map((service, i) => (
                     <div key={i} className={styles.serviceCard}>
                         <div className={styles.iconWrapper}>{service.icon}</div>

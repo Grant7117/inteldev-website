@@ -63,7 +63,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <Services paddingTop="3rem" />
+            <Services paddingTop="3rem" columns={4} />
 
             <section style={{ backgroundColor: 'var(--background)' }}>
                 <div className="container">
