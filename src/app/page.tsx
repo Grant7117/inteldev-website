@@ -18,7 +18,7 @@ export default function Home() {
               <span style={{ display: 'block', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '1rem', fontWeight: 600 }}>Intelligence Ecosystem</span>
               <h2 style={{ fontSize: '3rem', color: 'var(--heading)' }}>Core <span style={{ color: 'var(--primary)' }}>Offerings</span></h2>
             </div>
-            <Services paddingTop="0" paddingBottom="0" showContainer={false} columns={2} />
+            <Services paddingTop="0" paddingBottom="0" showContainer={false} columns={4} />
           </div>
 
           <aside className="right-column">

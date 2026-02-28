@@ -88,20 +88,9 @@ const MOCK_NEWS = [
 ];
 
 export default function NewsFeed({ showContainer = true }: { showContainer?: boolean } = {}) {
-    const [expandedId, setExpandedId] = useState<number | null>(null);
-
-    const toggleExpand = (id: number, e: React.MouseEvent) => {
-        e.preventDefault();
-        setExpandedId(expandedId === id ? null : id);
-    };
-
     const listContent = (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             {MOCK_NEWS.map((item) => {
-                const isExpanded = expandedId === item.id;
-                const isLongExcerpt = item.excerpt.length > 85;
-                const displayExcerpt = isExpanded || !isLongExcerpt ? item.excerpt : `${item.excerpt.substring(0, 85).trim()}...`;
-
                 return (
                     <article key={item.id} style={{
                         borderBottom: '1px solid var(--surface-border)',
@@ -113,49 +102,25 @@ export default function NewsFeed({ showContainer = true }: { showContainer?: boo
                         <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                             {item.author}
                         </div>
-                        <h3 style={{ fontSize: '1rem', color: 'var(--heading)', lineHeight: 1.3, fontFamily: 'var(--font-sans)', cursor: 'pointer' }} onClick={(e) => toggleExpand(item.id, e)}>
-                            {item.title}
+                        <h3 style={{ fontSize: '1rem', color: 'var(--heading)', lineHeight: 1.3, fontFamily: 'var(--font-sans)', cursor: 'pointer' }}>
+                            <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                {item.title}
+                            </a>
                         </h3>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.5, cursor: 'pointer' }} onClick={(e) => toggleExpand(item.id, e)}>
-                            {displayExcerpt}
-                        </p>
-
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginTop: '0.5rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginTop: '0.2rem' }}>
                             <a href={item.link} target="_blank" rel="noopener noreferrer" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '0.5rem',
+                                gap: '0.25rem',
                                 fontWeight: 600,
-                                fontSize: '0.75rem',
+                                fontSize: '0.7rem',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em',
                                 color: 'var(--primary)',
                                 transition: 'opacity 0.2s ease'
                             }}>
-                                Access Report <ExternalLink size={14} />
+                                Access Report <ExternalLink size={12} />
                             </a>
-
-                            {isLongExcerpt && (
-                                <button onClick={(e) => toggleExpand(item.id, e)} style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '0.25rem',
-                                    fontWeight: 600,
-                                    fontSize: '0.75rem',
-                                    color: 'var(--text-muted)',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.05em',
-                                    background: 'transparent',
-                                    border: 'none',
-                                    cursor: 'pointer'
-                                }}>
-                                    {isExpanded ? (
-                                        <>Close <ChevronUp size={14} /></>
-                                    ) : (
-                                        <>Read More <ChevronDown size={14} /></>
-                                    )}
-                                </button>
-                            )}
                         </div>
                     </article>
                 );
