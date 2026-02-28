@@ -14,15 +14,15 @@ export default function Home() {
         <div className={`container ${styles.homeGrid}`}>
 
           <div className="left-column">
-            <div style={{ height: '3.5rem', marginBottom: '3rem', display: 'flex', alignItems: 'flex-end' }}>
+            <div style={{ marginBottom: '3rem' }}>
               <h2 style={{ fontSize: '3rem', color: 'var(--heading)', fontWeight: 700, lineHeight: 1, margin: 0 }}>INTELLIGENCE <span style={{ color: 'var(--primary)' }}>ECOSYSTEM</span></h2>
             </div>
             <Services paddingTop="0" paddingBottom="0" showContainer={false} columns={3} />
           </div>
 
           <aside className="right-column">
-            <div style={{ height: '3.5rem', marginBottom: '3rem', borderBottom: '1px solid var(--primary)', paddingBottom: '0.5rem', display: 'flex', alignItems: 'flex-end' }}>
-              <h2 style={{ fontSize: '1rem', color: 'var(--heading)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, margin: 0 }}>Property Market Pulse</h2>
+            <div style={{ marginTop: '1.6rem', marginBottom: '3rem', borderBottom: '1px solid var(--primary)', paddingBottom: '0.5rem' }}>
+              <h2 style={{ fontSize: '1rem', color: 'var(--heading)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, margin: 0, lineHeight: 1 }}>Property Market Pulse</h2>
             </div>
             <NewsFeed showContainer={false} />
           </aside>

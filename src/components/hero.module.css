@@ -84,7 +84,7 @@
 }
 
 .title {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: 4rem;
     margin-bottom: 2rem;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -92,13 +92,14 @@
 
 .titleAccent {
     display: block;
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: 3rem;
     color: var(--card-text);
     font-weight: 700;
     margin-top: 0.5rem;
     font-family: var(--font-sans);
     text-transform: uppercase;
     letter-spacing: -0.02em;
+    line-height: 1;
 }
 
 .subtitle {
