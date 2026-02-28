@@ -73,10 +73,17 @@
     gap: 3rem;
 }
 
+.cardsColumn2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
 @media (max-width: 1024px) {
 
     .cardsColumn,
-    .cardsColumn4 {
+    .cardsColumn4,
+    .cardsColumn2 {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -84,7 +91,8 @@
 @media (max-width: 600px) {
 
     .cardsColumn,
-    .cardsColumn4 {
+    .cardsColumn4,
+    .cardsColumn2 {
         grid-template-columns: 1fr;
     }
 }

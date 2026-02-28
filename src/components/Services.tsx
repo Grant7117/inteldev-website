@@ -46,7 +46,7 @@ const SERVICES = [
 ];
 
 export default function Services({ paddingTop = '6rem', paddingBottom = '3rem', showContainer = true, columns = 3 }: { paddingTop?: string, paddingBottom?: string, showContainer?: boolean, columns?: number } = {}) {
-    const gridClass = columns === 4 ? styles.cardsColumn4 : styles.cardsColumn;
+    const gridClass = columns === 4 ? styles.cardsColumn4 : columns === 2 ? styles.cardsColumn2 : styles.cardsColumn;
     const content = (
         <div className={styles.grid}>
             <div className={gridClass}>
