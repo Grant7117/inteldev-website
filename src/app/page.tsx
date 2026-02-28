@@ -23,8 +23,7 @@ export default function Home() {
 
           <aside className="right-column">
             <div style={{ marginBottom: '3rem' }}>
-              <span style={{ display: 'block', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '1rem', fontWeight: 600 }}>Market Insights</span>
-              <h2 style={{ fontSize: '3rem', color: 'var(--heading)' }}>Feeds</h2>
+              <h2 style={{ fontSize: '2.5rem', color: 'var(--heading)' }}>Monthly Property Reports</h2>
             </div>
             <NewsFeed showContainer={false} />
           </aside>

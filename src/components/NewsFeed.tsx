@@ -105,15 +105,15 @@ export default function NewsFeed({ showContainer = true }: { showContainer?: boo
                 return (
                     <article key={item.id} style={{
                         borderBottom: '1px solid var(--surface-border)',
-                        paddingBottom: '2rem',
+                        paddingBottom: '1.25rem',
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '0.75rem'
+                        gap: '0.5rem'
                     }}>
-                        <div style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                             {item.author}
                         </div>
-                        <h3 style={{ fontSize: '1.25rem', color: 'var(--heading)', lineHeight: 1.4, fontFamily: 'var(--font-sans)', cursor: 'pointer' }} onClick={(e) => toggleExpand(item.id, e)}>
+                        <h3 style={{ fontSize: '1.15rem', color: 'var(--heading)', lineHeight: 1.3, fontFamily: 'var(--font-sans)', cursor: 'pointer' }} onClick={(e) => toggleExpand(item.id, e)}>
                             {item.title}
                         </h3>
                         <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6, cursor: 'pointer' }} onClick={(e) => toggleExpand(item.id, e)}>

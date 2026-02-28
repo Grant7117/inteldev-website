@@ -58,8 +58,10 @@
     position: relative;
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
-    padding: 2.5rem 2rem;
+    padding: 1.5rem;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -72,18 +74,17 @@
 .stepNumber {
     display: block;
     color: var(--primary);
-    font-family: var(--font-serif);
-    font-size: 2rem;
+    font-family: var(--font-sans);
+    font-size: 2.25rem;
     font-weight: 600;
-    margin-bottom: 1rem;
-    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1;
 }
 
 .itemTitle {
-    font-size: 1.25rem;
     color: var(--card-text);
-    margin-bottom: 1.5rem;
-    padding-left: 1.25rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
     font-family: var(--font-sans);
 }
 
@@ -99,15 +100,16 @@
     line-height: 1.6;
     margin-bottom: 0.75rem;
     position: relative;
-    padding-left: 1.25rem;
+    padding-left: 1.5rem;
 }
 
 .itemList li::before {
     content: '→';
     position: absolute;
     left: 0;
+    top: 0;
     color: var(--primary);
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .deliverables {
