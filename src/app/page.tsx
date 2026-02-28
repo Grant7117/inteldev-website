@@ -2,7 +2,6 @@ import React from 'react';
 import Ticker from '@/components/Ticker';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
-import ScopeOfWork from '@/components/ScopeOfWork';
 import NewsFeed from '@/components/NewsFeed';
 import styles from '@/components/page.module.css';
 

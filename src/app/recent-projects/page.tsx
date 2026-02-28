@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/components/page.module.css';
 import Ticker from '@/components/Ticker';
-import { Building, MapPin, CheckCircle } from 'lucide-react';
+import { Building, CheckCircle } from 'lucide-react';
 
 export default function RecentProjectsPage() {
     return (

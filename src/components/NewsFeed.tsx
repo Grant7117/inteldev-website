@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import styles from './news.module.css';
-import { ExternalLink, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 
 const MOCK_NEWS = [
     {

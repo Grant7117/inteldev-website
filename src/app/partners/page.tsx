@@ -23,7 +23,7 @@ export default function PartnersPage() {
                                 <p className={styles.cardDesc} style={{ textAlign: 'left', marginBottom: '2.5rem' }}>
                                     Igneous Property Development is an innovative, disruptive, consumer-driven company with over 30 years of experience in property investment and development.
                                     <br /><br />
-                                    Fully self-funded and operating outside the pressures of bank deadlines or prescribed pre-sales targets, they deliver premium products focusing on community living, affordability, and state-of-the-art security systems. Partnering with IntelDev's proprietary algorithmic intelligence, Igneous executes flawless, high-yield developments perfectly matched to current macroeconomic metrics.
+                                    Fully self-funded and operating outside the pressures of bank deadlines or prescribed pre-sales targets, they deliver premium products focusing on community living, affordability, and state-of-the-art security systems. Partnering with IntelDev&apos;s proprietary algorithmic intelligence, Igneous executes flawless, high-yield developments perfectly matched to current macroeconomic metrics.
                                 </p>
 
                                 <a href="https://www.igneousproperty.co.za" target="_blank" rel="noopener noreferrer" className={styles.cardLink} style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '1rem 2rem', borderRadius: '4px', border: '1px solid var(--card-border)' }}>

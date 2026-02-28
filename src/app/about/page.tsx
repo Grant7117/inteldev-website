@@ -16,7 +16,7 @@ export default function AboutPage() {
                             <span className={styles.label} style={{ fontWeight: 600 }}>The IntelDev Solution</span>
                             <h1 className={styles.title}>The <span style={{ color: 'var(--primary)' }}>Intelligence</span> Engine</h1>
                             <p className={styles.introText}>
-                                Traditional property development underwriting relies on static data, such as historical sales figures, outdated census reports, and subjective "market feel," which are often outdated by the time developers break ground. This makes them reactive.
+                                Traditional property development underwriting relies on static data, such as historical sales figures, outdated census reports, and subjective &quot;market feel,&quot; which are often outdated by the time developers break ground. This makes them reactive.
                                 <br /><br />
                                 IntelDev is not a consultancy. We are a proprietary, cloud-native architecture—a predictive intelligence engine. We provide large-scale data points and real-time, accurate data synthesized from the South African macroeconomic landscape, exactly what institutional capital demands.
                             </p>
@@ -55,7 +55,7 @@ export default function AboutPage() {
                                 <div className={styles.iconWrapper}><MapPin size={36} /></div>
                                 <h3 className={styles.itemTitle}>Supply-Side Telemetry</h3>
                                 <p className={styles.itemDesc}>
-                                    Real-time tracking of current developers' inventory, launch pricing, analyzing duration and price-point resistance.
+                                    Real-time tracking of current developers&apos; inventory, launch pricing, analyzing duration and price-point resistance.
                                 </p>
                             </div>
                         </div>
