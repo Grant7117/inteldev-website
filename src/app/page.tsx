@@ -15,8 +15,7 @@ export default function Home() {
 
           <div className="left-column">
             <div style={{ marginBottom: '3rem' }}>
-              <span style={{ display: 'block', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '1rem', fontWeight: 600 }}>Intelligence Ecosystem</span>
-              <h2 style={{ fontSize: '3rem', color: 'var(--heading)' }}>Core <span style={{ color: 'var(--primary)' }}>Offerings</span></h2>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'var(--heading)', letterSpacing: '-0.02em', fontWeight: 700 }}>INTELLIGENCE <span style={{ color: 'var(--primary)' }}>ECOSYSTEM</span></h2>
             </div>
             <Services paddingTop="0" paddingBottom="0" showContainer={false} columns={3} />
           </div>
