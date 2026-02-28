@@ -89,31 +89,31 @@ const MOCK_NEWS = [
 
 export default function NewsFeed({ showContainer = true }: { showContainer?: boolean } = {}) {
     const listContent = (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {MOCK_NEWS.map((item) => {
                 return (
                     <article key={item.id} style={{
                         borderBottom: '1px solid var(--surface-border)',
-                        paddingBottom: '1rem',
+                        paddingBottom: '0.5rem',
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '0.4rem'
+                        gap: '0.25rem'
                     }}>
-                        <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        <div style={{ fontSize: '0.65rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                             {item.author}
                         </div>
-                        <h3 style={{ fontSize: '1rem', color: 'var(--heading)', lineHeight: 1.3, fontFamily: 'var(--font-sans)', cursor: 'pointer' }}>
+                        <h3 style={{ fontSize: '0.85rem', color: 'var(--heading)', lineHeight: 1.2, fontFamily: 'var(--font-sans)', cursor: 'pointer' }}>
                             <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
                                 {item.title}
                             </a>
                         </h3>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginTop: '0.2rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.1rem' }}>
                             <a href={item.link} target="_blank" rel="noopener noreferrer" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '0.25rem',
+                                gap: '0.2rem',
                                 fontWeight: 600,
-                                fontSize: '0.7rem',
+                                fontSize: '0.65rem',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em',
                                 color: 'var(--primary)',
