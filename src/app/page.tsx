@@ -22,8 +22,8 @@ export default function Home() {
           </div>
 
           <aside className="right-column">
-            <div style={{ marginBottom: '2rem' }}>
-              <h2 style={{ fontSize: '1.5rem', color: 'var(--heading)', lineHeight: 1.2 }}>Monthly Property Reports</h2>
+            <div style={{ marginBottom: '1.5rem', borderBottom: '1px solid var(--primary)', paddingBottom: '0.75rem' }}>
+              <h2 style={{ fontSize: '1rem', color: 'var(--heading)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>Monthly Property Reports</h2>
             </div>
             <NewsFeed showContainer={false} />
           </aside>
