@@ -1,0 +1,157 @@
+.contactSection {
+    background-color: var(--background);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 2px;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--heading);
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.iconBg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(42, 83, 117, 0.1);
+    color: var(--primary);
+    border-radius: 4px;
+}
+
+.contactItem h4 {
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.contactItem p {
+    font-size: 1rem;
+    color: var(--heading);
+}
+
+/* Form Styles */
+.formCol {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    color: var(--card-text);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .inputRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--card-text);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+    border-radius: 2px;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form select {
+    appearance: none;
+    color: var(--card-muted);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 1.25rem;
+    background-color: var(--primary);
+    color: var(--background);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.submitBtn:hover {
+    background-color: #fff;
+}

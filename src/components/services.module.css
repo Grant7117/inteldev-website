@@ -1,0 +1,114 @@
+.servicesSection {
+    background-color: var(--background);
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        gap: 3rem;
+    }
+}
+
+.introColumn {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.kicker {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--heading);
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.actionBtn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.actionBtn:hover {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.cardsColumn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .cardsColumn {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardsColumn {
+        grid-template-columns: 1fr;
+    }
+}
+
+.serviceCard {
+    background-color: var(--card-bg);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary);
+}
+
+.iconWrapper {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.serviceTitle {
+    font-size: 1.25rem;
+    color: var(--card-text);
+    margin-bottom: 1rem;
+    font-family: var(--font-sans);
+}
+
+.serviceDesc {
+    color: var(--card-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

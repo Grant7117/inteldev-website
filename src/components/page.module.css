@@ -1,0 +1,132 @@
+.pageSection {
+    background-color: var(--background);
+    position: relative;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--heading);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+.introText {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 3rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary);
+}
+
+.cardIcon {
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.cardTitle {
+    color: var(--heading);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--card-text);
+}
+
+.cardSubtitle {
+    color: var(--primary);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.cardDesc {
+    color: var(--card-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.cardLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.cardLink:hover {
+    color: #fff;
+}
+
+.homeGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 4rem;
+    align-items: start;
+}
+
+@media (max-width: 1200px) {
+    .homeGrid {
+        grid-template-columns: 1fr;
+    }
+}
