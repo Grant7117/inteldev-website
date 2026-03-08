@@ -1,37 +1,15 @@
+/* Recent Projects - Hard Reset Version */
+
 .container {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-}
-
-.intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem auto;
-}
-
-.badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
-}
-
-.title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
 }
 
 .projectList {
     display: flex;
     flex-direction: column;
     gap: 12rem;
-    /* Exact, generous spacing for professionalism */
+    /* Generous, professional whitespace */
 }
 
 .projectCard {
@@ -39,7 +17,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     align-items: flex-start;
-    /* Precise top alignment with image */
+    /* Precise top alignment of text with image */
 }
 
 .projectCard.reversed {
@@ -52,11 +30,13 @@
 
 .imageWrapper {
     position: relative;
-    border-radius: 2px;
+    border-radius: 4px;
+    /* Slight radius for premium feel */
     overflow: hidden;
     aspect-ratio: 3 / 2;
     background-color: var(--background-off);
     border: 1px solid var(--surface-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .projectImage {
@@ -73,37 +53,40 @@
 .projectInfo {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .projectName {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    /* Increased scale for 'Section Title' impact */
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    /* Large, bold section titles */
     color: var(--heading);
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1;
-    /* Tight line height for alignment */
+    line-height: 1.1;
 }
 
 .description {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.8;
     color: var(--text-muted);
 }
 
-.simpleDetails {
-    display: flex;
-    gap: 4rem;
-    padding: 1.5rem 0;
-    border-top: 1px solid var(--surface-border);
+.highlightDetails {
+    padding: 2rem 0;
+    border-top: 2px solid var(--surface-border);
 }
 
-.detailValue {
-    font-size: 1.25rem;
+.highlightRow {
+    display: flex;
+    gap: 3rem;
+}
+
+.highlightValue {
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: #ff0000;
+    /* Red as requested in annotations for emphasis */
 }
 
 .actions {
@@ -111,43 +94,44 @@
     gap: 1.5rem;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
-.primeBtn,
-.ytBtn {
+/* Pill Shaped Branded Buttons */
+.pillBtnGlobe,
+.pillBtnYoutube {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.8rem 1.75rem;
+    padding: 0.9rem 2.5rem;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05em;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    border-radius: 40px;
-    /* Pill shape for buttons as per annotations */
+    border-radius: 60px;
+    /* Perfect pill shape */
 }
 
-.primeBtn {
+.pillBtnGlobe {
     background-color: var(--primary-color);
     color: #ffffff;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
-.primeBtn:hover {
+.pillBtnGlobe:hover {
     background-color: transparent;
     color: var(--primary-color);
     transform: translateY(-2px);
 }
 
-.ytBtn {
+.pillBtnYoutube {
     background-color: transparent;
     color: #ff0000;
     border: 2px solid #ff0000;
-    font-weight: 800;
 }
 
-.ytBtn:hover {
+.pillBtnYoutube:hover {
     background-color: #fff1f1;
     transform: translateY(-2px);
 }
@@ -176,8 +160,8 @@
         aspect-ratio: 16 / 9;
     }
 
-    .simpleDetails {
-        gap: 2rem;
+    .highlightRow {
         flex-direction: column;
+        gap: 1rem;
     }
 }

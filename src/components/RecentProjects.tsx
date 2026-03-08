@@ -64,17 +64,6 @@ const PROJECTS: Project[] = [
 export default function RecentProjects() {
     return (
         <section className={styles.container}>
-            <div className={styles.introHeader}>
-                <span className={styles.goldLabel}>THE INTELDEV PORTFOLIO</span>
-                <h1 className={styles.mainTitle}>
-                    Strategic Project <span className={styles.limeText}>Portfolio</span>
-                </h1>
-                <p className={styles.introDesc}>
-                    A data-driven showcase of our developmental intelligence, architectural resilience,
-                    and high-yield residential delivery across the Western Cape.
-                </p>
-            </div>
-
             <div className={styles.projectList}>
                 {PROJECTS.map((project, index) => (
                     <article key={project.id} className={`${styles.projectCard} ${index % 2 !== 0 ? styles.reversed : ''}`}>
@@ -92,18 +81,16 @@ export default function RecentProjects() {
                         </div>
 
                         <div className={styles.projectInfo}>
-                            <h3 className={styles.projectName}>{project.name}</h3>
+                            <h2 className={styles.projectName}>{project.name}</h2>
 
                             <p className={styles.description}>
                                 {project.description}
                             </p>
 
-                            <div className={styles.simpleDetails}>
-                                <div className={styles.simpleItem}>
-                                    <span className={styles.detailValue}>{project.units}</span>
-                                </div>
-                                <div className={styles.simpleItem}>
-                                    <span className={styles.detailValue}>{project.location}</span>
+                            <div className={styles.highlightDetails}>
+                                <div className={styles.highlightRow}>
+                                    <span className={styles.highlightValue}>{project.units}</span>
+                                    <span className={styles.highlightValue}>{project.location}</span>
                                 </div>
                             </div>
 
@@ -113,9 +100,10 @@ export default function RecentProjects() {
                                         href={`https://${project.websiteUrl}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.primeBtn}
+                                        className={styles.pillBtnGlobe}
                                     >
-                                        <Globe size={16} /> {project.websiteUrl.toUpperCase()}
+                                        <Globe size={18} />
+                                        <span>{project.websiteUrl.toUpperCase()}</span>
                                     </a>
                                 )}
                                 {project.youtubeVideos && project.youtubeVideos.length > 0 && (
@@ -123,9 +111,9 @@ export default function RecentProjects() {
                                         href={project.youtubeVideos[0].url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.ytBtn}
+                                        className={styles.pillBtnYoutube}
                                     >
-                                        <Youtube size={20} color="#ff0000" fill="#ff0000" />
+                                        <Youtube size={22} color="#ff0000" fill="#ff0000" />
                                         <span>YouTube</span>
                                     </a>
                                 )}
