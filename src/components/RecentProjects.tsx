@@ -101,8 +101,13 @@ export default function RecentProjects() {
                                         rel="noopener noreferrer"
                                         className={styles.pillBtnGlobe}
                                     >
-                                        <Mail size={18} />
-                                        <span>{project.websiteUrl.toUpperCase()}</span>
+                                        <div className={`${styles.iconContainer} ${styles.iconBlue}`}>
+                                            <Mail size={22} color="#ffffff" />
+                                        </div>
+                                        <div className={styles.btnTextWrapper}>
+                                            <span className={styles.btnLabel}>Email</span>
+                                            <span className={styles.btnSubText}>{project.websiteUrl.toLowerCase()}</span>
+                                        </div>
                                     </a>
                                 )}
                                 {project.youtubeVideos && project.youtubeVideos.length > 0 && (
@@ -112,8 +117,13 @@ export default function RecentProjects() {
                                         rel="noopener noreferrer"
                                         className={styles.pillBtnYoutube}
                                     >
-                                        <Youtube size={22} color="#ff0000" fill="#ff0000" />
-                                        <span>VIDEOS</span>
+                                        <div className={`${styles.iconContainer} ${styles.iconRed}`}>
+                                            <Youtube size={22} color="#ffffff" fill="#ffffff" />
+                                        </div>
+                                        <div className={styles.btnTextWrapper}>
+                                            <span className={styles.btnLabel}>Location Video</span>
+                                            <span className={styles.btnSubText}>Watch Property Location Video</span>
+                                        </div>
                                     </a>
                                 )}
                             </div>
