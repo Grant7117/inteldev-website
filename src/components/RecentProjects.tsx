@@ -39,9 +39,9 @@ const PROJECTS: Project[] = [
         status: 'SOLD',
         units: '72 Total Units (3 x 24)',
         location: '38, 40 & 42 North Road',
-        description: 'Residence on North consists of three separate architectural developments. Designed incorporating modern world-renowned influences, including a New York-style top-floor viewing deck and an outdoor entertainment area.',
-        fullDescription: 'Each 24-unit building has been architecturally designed to make the best use of space and lighting, incorporating top-quality finishes normally seen on the Camps Bay beachfront. Features include GROHE sanitary ware, AEG gas appliances, and integrated gas geysers for resilience.',
-        image: '/images/Residence-on-north/Residence-on-north-brochure.png',
+        description: 'A landmark development comprising three separate residential buildings of 24 units each. Designed with a New York-inspired aesthetic, featuring top-floor viewing decks and sophisticated outdoor entertainment spaces.',
+        fullDescription: 'Each building incorporates premium finishes including GROHE sanitary ware and AEG appliances. The project was engineered for resilience with integrated gas infrastructure and high-specification architectural detailing.',
+        image: '/images/Residence-on-north/42-North-Road.png',
         websiteUrl: 'www.theresidenceonnorth.co.za',
         youtubeVideos: [
             { label: 'Production Video 1', url: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz' },
@@ -55,8 +55,8 @@ const PROJECTS: Project[] = [
         status: 'SOLD',
         units: '15 Units',
         location: 'Table View',
-        description: 'A boutique residential development optimized for the burgeoning Table View market. North View Terrace focused on providing clean architectural lines and high-yield potential for early investors.',
-        image: '/images/North View Terrace/North-view-terrace.jpg',
+        description: 'A boutique residential development optimized for the burgeoning Table View market. North View Terrace focused on providing clean architectural lines and high-yield potential for investors.',
+        image: '/images/North%20View%20Terrace/North-view-terrace.jpg',
         year: '2022'
     }
 ];
