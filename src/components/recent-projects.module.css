@@ -122,7 +122,8 @@
 .actions {
     margin-top: 1rem;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
 }
 
 .visitBtn {

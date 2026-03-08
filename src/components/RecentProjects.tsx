@@ -13,7 +13,7 @@ interface Project {
     fullDescription?: string;
     image: string;
     websiteUrl?: string;
-    youtubeUrl?: string;
+    youtubeVideos?: { label: string; url: string }[];
     year?: string;
 }
 
@@ -28,7 +28,9 @@ const PROJECTS: Project[] = [
         fullDescription: 'Featuring 22 thoughtfully designed one- and two-bedroom units, the project presents an exceptional investment opportunity with modern aesthetics and reinforced structure for long-term durability.',
         image: '/images/Cornerstone-on-arum/hero-image.jpg',
         websiteUrl: 'https://www.cornerstoneonarum.co.za',
-        youtubeUrl: 'https://www.youtube.com/@CornerstoneonArum',
+        youtubeVideos: [
+            { label: 'Project Channel', url: 'https://www.youtube.com/@CornerstoneonArum' }
+        ],
         year: '2024-2025'
     },
     {
@@ -41,7 +43,10 @@ const PROJECTS: Project[] = [
         fullDescription: 'Each 24-unit building has been architecturally designed to make the best use of space and lighting, incorporating top-quality finishes normally seen on the Camps Bay beachfront. Features include GROHE sanitary ware, AEG gas appliances, and integrated gas geysers for resilience.',
         image: '/images/Residence-on-north/Residence-on-north-brochure.png',
         websiteUrl: 'https://www.theresidenceonnorth.co.za/',
-        youtubeUrl: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz',
+        youtubeVideos: [
+            { label: 'Watch Video 1', url: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz' },
+            { label: 'Watch Video 2', url: 'https://youtu.be/RoRyZSSQB-I?si=vFZistEdDJNU2tUx' }
+        ],
         year: '2023-2024'
     },
     {
@@ -117,17 +122,18 @@ export default function RecentProjects() {
                                         Visit Website <ExternalLink size={16} />
                                     </a>
                                 )}
-                                {project.youtubeUrl && (
+                                {project.youtubeVideos?.map((video, vIndex) => (
                                     <a
-                                        href={project.youtubeUrl}
+                                        key={vIndex}
+                                        href={video.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.visitBtn}
                                         style={{ backgroundColor: 'var(--secondary-color)' }}
                                     >
-                                        Watch Video <Youtube size={16} />
+                                        {video.label} <Youtube size={16} />
                                     </a>
-                                )}
+                                ))}
                             </div>
                         </div>
                     </article>
