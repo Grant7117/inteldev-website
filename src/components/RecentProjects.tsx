@@ -64,6 +64,17 @@ const PROJECTS: Project[] = [
 export default function RecentProjects() {
     return (
         <section className={styles.container}>
+            <div className={styles.introHeader}>
+                <span className={styles.goldLabel}>THE INTELDEV PORTFOLIO</span>
+                <h1 className={styles.mainTitle}>
+                    Strategic Project <span className={styles.limeText}>Portfolio</span>
+                </h1>
+                <p className={styles.introDesc}>
+                    A data-driven showcase of our developmental intelligence, architectural resilience,
+                    and high-yield residential delivery across the Western Cape.
+                </p>
+            </div>
+
             <div className={styles.projectList}>
                 {PROJECTS.map((project, index) => (
                     <article key={project.id} className={`${styles.projectCard} ${index % 2 !== 0 ? styles.reversed : ''}`}>
@@ -81,11 +92,13 @@ export default function RecentProjects() {
                         </div>
 
                         <div className={styles.projectInfo}>
-                            <div className={styles.metaRow}>
+                            <div className={styles.headerRow}>
+                                <span className={styles.projectNumber}>0{index + 1}</span>
                                 <span className={styles.status}>{project.status}</span>
-                                <span className={styles.year}>{project.year}</span>
                             </div>
+
                             <h3 className={styles.projectName}>{project.name}</h3>
+
                             <p className={styles.description}>
                                 {project.description}
                             </p>
@@ -98,6 +111,10 @@ export default function RecentProjects() {
                                 <div className={styles.detailItem}>
                                     <span>Location</span>
                                     <strong>{project.location}</strong>
+                                </div>
+                                <div className={styles.detailItem}>
+                                    <span>Year</span>
+                                    <strong>{project.year}</strong>
                                 </div>
                             </div>
 
