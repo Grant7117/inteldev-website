@@ -84,12 +84,26 @@
     padding-top: 1rem;
 }
 
+.metaRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--surface-border);
+    padding-bottom: 1rem;
+}
+
 .status {
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--accent-color);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+}
+
+.year {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
 }
 
 .projectName {
@@ -114,31 +128,31 @@
     border-bottom: 1px solid var(--surface-border);
 }
 
-.detailItem strong {
-    display: block;
-    font-size: 1.1rem;
-    color: var(--heading);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
 .detailItem span {
+    display: block;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     color: var(--text-muted);
     font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.detailItem strong {
+    font-size: 1.1rem;
+    color: var(--heading);
+    font-weight: 600;
 }
 
 .actions {
-    margin-top: 1rem;
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
-.websiteBtn,
-.youtubeBtn {
+.primeBtn,
+.secBtn {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
@@ -149,29 +163,32 @@
     letter-spacing: 0.05rem;
     transition: all 0.3s ease;
     border-radius: 2px;
-}
-
-.websiteBtn {
-    background-color: var(--primary-color);
-    color: #ffffff;
     border: 1px solid var(--primary-color);
 }
 
-.websiteBtn:hover {
+/* Original Charcoal/Green color scheme based primeBtn */
+.primeBtn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.primeBtn:hover {
     background-color: transparent;
     color: var(--primary-color);
 }
 
-.youtubeBtn {
+/* Original theme accent-based secBtn */
+.secBtn {
     background-color: transparent;
     color: var(--primary-color);
-    border: 1px solid rgba(26, 42, 36, 0.2);
+    opacity: 0.8;
 }
 
-.youtubeBtn:hover {
-    border-color: #ff0000;
-    color: #ff0000;
-    background-color: rgba(255, 0, 0, 0.02);
+.secBtn:hover {
+    opacity: 1;
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+    background-color: var(--background-off);
 }
 
 @media (max-width: 1024px) {

@@ -29,7 +29,7 @@ const PROJECTS: Project[] = [
         image: '/images/Cornerstone-on-arum/hero-image.jpg',
         websiteUrl: 'www.cornerstoneonarum.co.za',
         youtubeVideos: [
-            { label: 'YouTube Channel', url: 'https://www.youtube.com/@CornerstoneonArum' }
+            { label: 'Project Channel', url: 'https://www.youtube.com/@CornerstoneonArum' }
         ],
         year: '2024-2025'
     },
@@ -56,7 +56,7 @@ const PROJECTS: Project[] = [
         units: '15 Units',
         location: 'Table View',
         description: 'A boutique residential development optimized for the burgeoning Table View market. North View Terrace focused on providing clean architectural lines and high-yield potential for investors.',
-        image: '/images/North%20View%20Terrace/North-view-terrace.jpg',
+        image: '/images/North-View-Terrace/North-view-terrace.jpg',
         year: '2022'
     }
 ];
@@ -73,7 +73,7 @@ export default function RecentProjects() {
                                 alt={project.name}
                                 className={styles.projectImage}
                                 width={1200}
-                                height={800}
+                                height={900}
                                 style={{ objectFit: 'cover' }}
                                 unoptimized
                                 priority={index === 0}
@@ -81,7 +81,10 @@ export default function RecentProjects() {
                         </div>
 
                         <div className={styles.projectInfo}>
-                            <span className={styles.status}>{project.status}</span>
+                            <div className={styles.metaRow}>
+                                <span className={styles.status}>{project.status}</span>
+                                <span className={styles.year}>{project.year}</span>
+                            </div>
                             <h3 className={styles.projectName}>{project.name}</h3>
                             <p className={styles.description}>
                                 {project.description}
@@ -89,20 +92,14 @@ export default function RecentProjects() {
 
                             <div className={styles.details}>
                                 <div className={styles.detailItem}>
-                                    <strong>{project.units}</strong>
                                     <span>Scope</span>
+                                    <strong>{project.units}</strong>
                                 </div>
                                 <div className={styles.detailItem}>
-                                    <strong>{project.location}</strong>
                                     <span>Location</span>
+                                    <strong>{project.location}</strong>
                                 </div>
                             </div>
-
-                            {project.fullDescription && (
-                                <p className={styles.description} style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                                    {project.fullDescription}
-                                </p>
-                            )}
 
                             <div className={styles.actions}>
                                 {project.websiteUrl && (
@@ -110,9 +107,9 @@ export default function RecentProjects() {
                                         href={`https://${project.websiteUrl}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.websiteBtn}
+                                        className={styles.primeBtn}
                                     >
-                                        <Globe size={18} /> {project.websiteUrl}
+                                        <Globe size={16} /> {project.websiteUrl}
                                     </a>
                                 )}
                                 {project.youtubeVideos?.map((video, vIndex) => (
@@ -121,9 +118,9 @@ export default function RecentProjects() {
                                         href={video.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.youtubeBtn}
+                                        className={styles.secBtn}
                                     >
-                                        <Youtube size={18} /> {video.label}
+                                        <Youtube size={16} /> {video.label}
                                     </a>
                                 ))}
                             </div>
