@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './recent-projects.module.css';
-import { ExternalLink, Youtube } from 'lucide-react';
+import { Youtube, Globe } from 'lucide-react';
 
 interface Project {
     id: string;
@@ -27,9 +27,9 @@ const PROJECTS: Project[] = [
         description: 'Cornerstone on Arum sets a benchmark for residential living in Table View. The development offers premium apartments within a secure and well-managed community, designed to deliver long-term value through superior standards of design, sustainability, and comfort.',
         fullDescription: 'Featuring 22 thoughtfully designed one- and two-bedroom units, the project presents an exceptional investment opportunity with modern aesthetics and reinforced structure for long-term durability.',
         image: '/images/Cornerstone-on-arum/hero-image.jpg',
-        websiteUrl: 'https://www.cornerstoneonarum.co.za',
+        websiteUrl: 'www.cornerstoneonarum.co.za',
         youtubeVideos: [
-            { label: 'Project Channel', url: 'https://www.youtube.com/@CornerstoneonArum' }
+            { label: 'YouTube Channel', url: 'https://www.youtube.com/@CornerstoneonArum' }
         ],
         year: '2024-2025'
     },
@@ -42,10 +42,10 @@ const PROJECTS: Project[] = [
         description: 'Residence on North consists of three separate architectural developments. Designed incorporating modern world-renowned influences, including a New York-style top-floor viewing deck and an outdoor entertainment area.',
         fullDescription: 'Each 24-unit building has been architecturally designed to make the best use of space and lighting, incorporating top-quality finishes normally seen on the Camps Bay beachfront. Features include GROHE sanitary ware, AEG gas appliances, and integrated gas geysers for resilience.',
         image: '/images/Residence-on-north/Residence-on-north-brochure.png',
-        websiteUrl: 'https://www.theresidenceonnorth.co.za/',
+        websiteUrl: 'www.theresidenceonnorth.co.za',
         youtubeVideos: [
-            { label: 'Watch Video 1', url: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz' },
-            { label: 'Watch Video 2', url: 'https://youtu.be/RoRyZSSQB-I?si=vFZistEdDJNU2tUx' }
+            { label: 'Production Video 1', url: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz' },
+            { label: 'Production Video 2', url: 'https://youtu.be/RoRyZSSQB-I?si=vFZistEdDJNU2tUx' }
         ],
         year: '2023-2024'
     },
@@ -64,15 +64,6 @@ const PROJECTS: Project[] = [
 export default function RecentProjects() {
     return (
         <section className={styles.container}>
-            <div className={styles.intro}>
-                <span className={styles.badge}>Execution Portfolio</span>
-                <h2 className={styles.title}>Benchmark Residential Developments</h2>
-                <p className={styles.subtitle}>
-                    A track record of high-yield urban revitalization projects, successfully underwritten,
-                    marketed and executed through precise feasibility modeling and design excellence.
-                </p>
-            </div>
-
             <div className={styles.projectList}>
                 {PROJECTS.map((project, index) => (
                     <article key={project.id} className={`${styles.projectCard} ${index % 2 !== 0 ? styles.reversed : ''}`}>
@@ -81,9 +72,11 @@ export default function RecentProjects() {
                                 src={project.image}
                                 alt={project.name}
                                 className={styles.projectImage}
-                                width={800}
-                                height={500}
+                                width={1200}
+                                height={800}
                                 style={{ objectFit: 'cover' }}
+                                unoptimized
+                                priority={index === 0}
                             />
                         </div>
 
@@ -114,12 +107,12 @@ export default function RecentProjects() {
                             <div className={styles.actions}>
                                 {project.websiteUrl && (
                                     <a
-                                        href={project.websiteUrl}
+                                        href={`https://${project.websiteUrl}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.visitBtn}
+                                        className={styles.websiteBtn}
                                     >
-                                        Visit Website <ExternalLink size={16} />
+                                        <Globe size={18} /> {project.websiteUrl}
                                     </a>
                                 )}
                                 {project.youtubeVideos?.map((video, vIndex) => (
@@ -128,10 +121,9 @@ export default function RecentProjects() {
                                         href={video.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.visitBtn}
-                                        style={{ backgroundColor: 'var(--secondary-color)' }}
+                                        className={styles.youtubeBtn}
                                     >
-                                        {video.label} <Youtube size={16} />
+                                        <Youtube size={18} /> {video.label}
                                     </a>
                                 ))}
                             </div>

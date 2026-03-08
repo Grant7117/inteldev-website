@@ -126,24 +126,42 @@
     flex-wrap: wrap;
 }
 
-.visitBtn {
+.websiteBtn,
+.youtubeBtn {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 1rem 2rem;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
-    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 6px;
+    border: 1px solid transparent;
 }
 
-.visitBtn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
+.websiteBtn {
+    background-color: var(--surface-light, #f8f9fa);
+    color: var(--heading, #1a1a1a);
+    border-color: var(--surface-border, #e5e7eb);
+}
+
+.websiteBtn:hover {
+    background-color: #fff;
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+.youtubeBtn {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.youtubeBtn:hover {
+    background-color: #cc0000;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+    transform: translateY(-1px);
 }
 
 @media (max-width: 968px) {
