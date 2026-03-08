@@ -1,8 +1,7 @@
-'use client';
-
 import React from 'react';
+import Image from 'next/image';
 import styles from './recent-projects.module.css';
-import { ExternalLink, House } from 'lucide-react';
+import { ExternalLink, Youtube } from 'lucide-react';
 
 interface Project {
     id: string;
@@ -14,6 +13,7 @@ interface Project {
     fullDescription?: string;
     image: string;
     websiteUrl?: string;
+    youtubeUrl?: string;
     year?: string;
 }
 
@@ -26,8 +26,9 @@ const PROJECTS: Project[] = [
         location: 'Table View, Cape Town',
         description: 'Cornerstone on Arum sets a benchmark for residential living in Table View. The development offers premium apartments within a secure and well-managed community, designed to deliver long-term value through superior standards of design, sustainability, and comfort.',
         fullDescription: 'Featuring 22 thoughtfully designed one- and two-bedroom units, the project presents an exceptional investment opportunity with modern aesthetics and reinforced structure for long-term durability.',
-        image: '/images/cornerstone-on-arum-hero-image.jpeg', // Placeholder path
-        websiteUrl: 'https://cornerstone-on-arum.co.za', // Placeholder
+        image: '/images/Cornerstone-on-arum/hero-image.jpg',
+        websiteUrl: 'https://www.cornerstoneonarum.co.za',
+        youtubeUrl: 'https://www.youtube.com/@CornerstoneonArum',
         year: '2024-2025'
     },
     {
@@ -38,8 +39,9 @@ const PROJECTS: Project[] = [
         location: '38, 40 & 42 North Road',
         description: 'Residence on North consists of three separate architectural developments. Designed incorporating modern world-renowned influences, including a New York-style top-floor viewing deck and an outdoor entertainment area.',
         fullDescription: 'Each 24-unit building has been architecturally designed to make the best use of space and lighting, incorporating top-quality finishes normally seen on the Camps Bay beachfront. Features include GROHE sanitary ware, AEG gas appliances, and integrated gas geysers for resilience.',
-        image: '/images/17-north-hero-image.jpeg', // Placeholder path
-        websiteUrl: 'https://residence-on-north.co.za', // Placeholder
+        image: '/images/Residence-on-north/Residence-on-north-brochure.png',
+        websiteUrl: 'https://www.theresidenceonnorth.co.za/',
+        youtubeUrl: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz',
         year: '2023-2024'
     },
     {
@@ -49,7 +51,7 @@ const PROJECTS: Project[] = [
         units: '15 Units',
         location: 'Table View',
         description: 'A boutique residential development optimized for the burgeoning Table View market. North View Terrace focused on providing clean architectural lines and high-yield potential for early investors.',
-        image: '/images/north-view-terrace-hero.jpeg', // Placeholder path
+        image: '/images/North View Terrace/North-view-terrace.jpg',
         year: '2022'
     }
 ];
@@ -70,23 +72,14 @@ export default function RecentProjects() {
                 {PROJECTS.map((project, index) => (
                     <article key={project.id} className={`${styles.projectCard} ${index % 2 !== 0 ? styles.reversed : ''}`}>
                         <div className={styles.imageWrapper}>
-                            <div style={{
-                                width: '100%',
-                                height: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                backgroundColor: '#f0f0f0',
-                                color: '#999',
-                                fontSize: '0.875rem'
-                            }}>
-                                <House size={48} />
-                                <span style={{ marginLeft: '1rem' }}>Rendering Pending Upload</span>
-                            </div>
-                            {/* 
-                                Once images arrive, we'll replace the block above with:
-                                <img src={project.image} alt={project.name} className={styles.projectImage} />
-                            */}
+                            <Image
+                                src={project.image}
+                                alt={project.name}
+                                className={styles.projectImage}
+                                width={800}
+                                height={500}
+                                style={{ objectFit: 'cover' }}
+                            />
                         </div>
 
                         <div className={styles.projectInfo}>
@@ -113,18 +106,29 @@ export default function RecentProjects() {
                                 </p>
                             )}
 
-                            {project.websiteUrl && (
-                                <div className={styles.actions}>
+                            <div className={styles.actions}>
+                                {project.websiteUrl && (
                                     <a
                                         href={project.websiteUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.visitBtn}
                                     >
-                                        Visit Project Website <ExternalLink size={16} />
+                                        Visit Website <ExternalLink size={16} />
                                     </a>
-                                </div>
-                            )}
+                                )}
+                                {project.youtubeUrl && (
+                                    <a
+                                        href={project.youtubeUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.visitBtn}
+                                        style={{ backgroundColor: 'var(--secondary-color)' }}
+                                    >
+                                        Watch Video <Youtube size={16} />
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </article>
                 ))}
