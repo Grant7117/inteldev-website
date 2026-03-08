@@ -37,10 +37,9 @@ const PROJECTS: Project[] = [
         id: 'residence-on-north',
         name: 'Residence on North',
         status: 'SOLD',
-        units: '72 units',
+        units: '24 spacious apartments',
         location: 'North Road, Table View',
-        description: 'A landmark development comprising three separate residential buildings of 24 units each. Designed with a New York-inspired aesthetic, featuring top-floor viewing decks and sophisticated outdoor entertainment spaces.',
-        fullDescription: 'Each building incorporates premium finishes including GROHE sanitary ware and AEG appliances. The project was engineered for resilience with integrated gas infrastructure and high-specification architectural detailing.',
+        description: 'Residence on North is a premium residential complex, offering a selection of 24 spacious apartments. The development features a variety of unit types, including studio apartments, one-bedroom units, one-bedroom loft-style apartments, and two-bedroomed residences. Each apartment is designed with comfort and modern living in mind, providing a unique blend of style and functionality.',
         image: '/images/Residence-on-north/42-North-Road.png',
         websiteUrl: 'www.theresidenceonnorth.co.za',
         youtubeVideos: [
