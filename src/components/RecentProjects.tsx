@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './recent-projects.module.css';
-import { Youtube, Globe } from 'lucide-react';
+import { Youtube, Mail } from 'lucide-react';
 
 interface Project {
     id: string;
@@ -102,7 +102,7 @@ export default function RecentProjects() {
                                         rel="noopener noreferrer"
                                         className={styles.pillBtnGlobe}
                                     >
-                                        <Globe size={18} />
+                                        <Mail size={18} />
                                         <span>{project.websiteUrl.toUpperCase()}</span>
                                     </a>
                                 )}
@@ -114,7 +114,7 @@ export default function RecentProjects() {
                                         className={styles.pillBtnYoutube}
                                     >
                                         <Youtube size={22} color="#ff0000" fill="#ff0000" />
-                                        <span>YouTube</span>
+                                        <span>VIDEOS</span>
                                     </a>
                                 )}
                             </div>
