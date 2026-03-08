@@ -57,41 +57,42 @@
 }
 
 .projectName {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    /* Large, bold section titles */
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
     color: var(--heading);
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1;
+    /* Flush with image top */
 }
 
 .description {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-muted);
 }
 
 .highlightDetails {
-    padding: 2rem 0;
-    border-top: 2px solid var(--surface-border);
+    padding-top: 2rem;
+    border-top: 1px solid var(--surface-border);
 }
 
 .highlightRow {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .highlightValue {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     font-weight: 700;
-    color: #ff0000;
-    /* Red as requested in annotations for emphasis */
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .actions {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;
@@ -103,20 +104,19 @@
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.9rem 2.5rem;
+    padding: 0.75rem 1.75rem;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    border-radius: 60px;
-    /* Perfect pill shape */
+    border-radius: 100px;
 }
 
 .pillBtnGlobe {
     background-color: var(--primary-color);
     color: #ffffff;
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .pillBtnGlobe:hover {
@@ -127,12 +127,14 @@
 
 .pillBtnYoutube {
     background-color: transparent;
-    color: #ff0000;
-    border: 2px solid #ff0000;
+    color: var(--primary-color);
+    border: 1px solid rgba(26, 42, 36, 0.2);
 }
 
 .pillBtnYoutube:hover {
+    border-color: #ff0000;
     background-color: #fff1f1;
+    color: #ff0000;
     transform: translateY(-2px);
 }
 
