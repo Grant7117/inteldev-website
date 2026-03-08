@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './recent-projects.module.css';
-import { Youtube, Mail } from 'lucide-react';
 
 interface Project {
     id: string;
@@ -80,50 +79,30 @@ export default function RecentProjects() {
                         </div>
 
                         <div className={styles.projectInfo}>
-                            <h2 className={styles.projectName}>{project.name}</h2>
+                            <h2 className={styles.projectName}>
+                                {project.name.split(' ').slice(0, -1).join(' ')}{' '}
+                                <span className={styles.limeHighlight}>
+                                    {project.name.split(' ').slice(-1)}
+                                </span>
+                            </h2>
 
                             <p className={styles.description}>
                                 {project.description}
                             </p>
 
-                            <div className={styles.highlightDetails}>
-                                <div className={styles.highlightRow}>
-                                    <span className={styles.highlightValue}>{project.units}</span>
-                                    <span className={styles.highlightValue}>{project.location}</span>
-                                </div>
+                            <div className={styles.simpleInfo}>
+                                {project.units} , {project.location}
                             </div>
 
-                            <div className={styles.actions}>
+                            <div className={styles.links}>
                                 {project.websiteUrl && (
                                     <a
                                         href={`https://${project.websiteUrl}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.pillBtnGlobe}
+                                        className={styles.textLink}
                                     >
-                                        <div className={`${styles.iconContainer} ${styles.iconBlue}`}>
-                                            <Mail size={22} color="#ffffff" />
-                                        </div>
-                                        <div className={styles.btnTextWrapper}>
-                                            <span className={styles.btnLabel}>Email</span>
-                                            <span className={styles.btnSubText}>{project.websiteUrl.toLowerCase()}</span>
-                                        </div>
-                                    </a>
-                                )}
-                                {project.youtubeVideos && project.youtubeVideos.length > 0 && (
-                                    <a
-                                        href={project.youtubeVideos[0].url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={styles.pillBtnYoutube}
-                                    >
-                                        <div className={`${styles.iconContainer} ${styles.iconRed}`}>
-                                            <Youtube size={22} color="#ffffff" fill="#ffffff" />
-                                        </div>
-                                        <div className={styles.btnTextWrapper}>
-                                            <span className={styles.btnLabel}>Location Video</span>
-                                            <span className={styles.btnSubText}>Watch Property Location Video</span>
-                                        </div>
+                                        {project.websiteUrl.toLowerCase()}
                                     </a>
                                 )}
                             </div>

@@ -53,113 +53,49 @@
 .projectInfo {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .projectName {
-    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    font-size: 2.5rem;
     color: var(--heading);
     margin: 0;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1;
-    /* Flush with image top */
+    letter-spacing: -0.01em;
+}
+
+.limeHighlight {
+    color: #bef45e;
+    /* Lime green accent from branding */
 }
 
 .description {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--text-muted);
 }
 
-.highlightDetails {
-    padding-top: 2rem;
-    border-top: 1px solid var(--surface-border);
-}
-
-.highlightRow {
-    display: flex;
-    gap: 4rem;
-}
-
-.highlightValue {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.actions {
-    display: flex;
-    gap: 1.25rem;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.actions {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.pillBtnGlobe,
-.pillBtnYoutube {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.25rem;
-    padding: 0;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--heading);
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.pillBtnGlobe:hover,
-.pillBtnYoutube:hover {
-    transform: translateX(5px);
-}
-
-.iconContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    flex-shrink: 0;
-}
-
-.iconBlue {
-    background-color: #3b82f6;
-    /* Modern Blue */
-}
-
-.iconRed {
-    background-color: #ff0000;
-    /* YouTube Red */
-}
-
-.btnTextWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.btnLabel {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--heading);
-}
-
-.btnSubText {
+.simpleInfo {
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
     font-size: 0.95rem;
     color: var(--text-muted);
+}
+
+.links {
+    margin-top: 0.5rem;
+}
+
+.textLink {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.textLink:hover {
+    color: var(--primary-color);
     text-decoration: underline;
-    text-underline-offset: 4px;
 }
 
 @media (max-width: 1200px) {
