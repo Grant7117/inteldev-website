@@ -1,49 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 :root {
-  /* IntelDev-Prop-2026 Coastal Sanctuary Theme (Synced) */
-  --primary-color: #1a2a24;
-  /* Deep sophisticated green/charcoal */
-  --secondary-color: #3a4d42;
-  /* Soft moss/sage */
-  --accent-color: #c7eb6c;
-  /* Vibrant CTA lime green */
-  --accent-hover: #b4d85a;
-  /* Slightly darker lime for hover */
+  /* IntelDev Official Brand Identity Palette 2026 */
+  --primary-color: #122643;
+  /* Deep Brand Navy */
+  --secondary-color: #2a5375;
+  /* Professional Steel Blue */
+  --accent-color: #2a5375;
+  /* Using secondary blue as the main accent */
+  --accent-hover: #1e3d56;
+  /* Darker blue for hover states */
 
   /* Neutrals */
-  --background-white: #f9f8f4;
-  /* Warm premium cream instead of harsh white */
-  --background-light: #f2efe9;
-  /* Subdued cream/sand */
-  --background-off: #e8e5dc;
+  --background-white: #ffffff;
+  --background-light: #f2f4f5;
+  /* Official Light Gray */
+  --background-off: #e1e5e8;
+  /* Slightly deeper gray for depth */
 
-  /* Legacy IntelDev Mappings */
+  /* Surface Mappings */
   --background: var(--background-white);
   --surface: var(--background-light);
-  --surface-border: rgba(0, 0, 0, 0.08);
+  --surface-border: rgba(18, 38, 67, 0.12);
 
-  --foreground: #172420;
-  /* was text-slate-700 */
-  --heading: #172420;
-  /* was slate-900 */
-  --text-muted: #57655e;
+  --foreground: #122643;
+  /* Consistent with brand navy */
+  --heading: #122643;
+  --text-muted: #52667d;
+  /* Readability-optimized muted blue */
 
+  /* Card & Interactive Styles */
   --brand-navy: var(--primary-color);
-  --card-bg: var(--primary-color);
-  --card-border: rgba(255, 255, 255, 0.05);
-  --card-text: #f9f8f4;
-  --card-muted: #8a9690;
+  --card-bg: #ffffff;
+  --card-border: rgba(18, 38, 67, 0.08);
+  --card-text: var(--foreground);
+  --card-muted: #52667d;
 
-  --primary: var(--accent-color);
-  --primary-alt: #b4d85a;
-  --primary-dark: #a2c44f;
+  /* Theme Tokens */
+  --primary: var(--primary-color);
+  --primary-alt: var(--secondary-color);
+  --primary-dark: #0a182b;
 
   --font-sans: 'Outfit', sans-serif;
   --font-serif: 'Playfair Display', serif;
 
-  --radius-sm: 12px;
-  --radius-md: 20px;
+  --radius-sm: 8px;
+  /* Slightly more professional radius */
+  --radius-md: 16px;
 }
 
 * {
@@ -56,8 +59,10 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  font-size: 16px; /* Prevents iOS auto-zoom on inputs */
-  line-height: 1.5; /* Modern readability standard */
+  font-size: 16px;
+  /* Prevents iOS auto-zoom on inputs */
+  line-height: 1.5;
+  /* Modern readability standard */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -82,15 +87,18 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
-  padding: 4px 0; /* Increase vertical hit area for mobile links */
+  padding: 4px 0;
+  /* Increase vertical hit area for mobile links */
 }
 
 button {
   all: unset;
   cursor: pointer;
   box-sizing: border-box;
-  min-height: 44px; /* Minimum touch target height */
-  min-width: 44px;  /* Minimum touch target width */
+  min-height: 44px;
+  /* Minimum touch target height */
+  min-width: 44px;
+  /* Minimum touch target width */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +107,8 @@ button {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 max(1.5rem, 5%); /* Fluid padding for ultra-responsive gutters */
+  padding: 0 max(1.5rem, 5%);
+  /* Fluid padding for ultra-responsive gutters */
 }
 
 .primary-text {
@@ -111,7 +120,8 @@ button {
 }
 
 .section-padding {
-  padding: clamp(3.5rem, 8vw, 6rem) 0; /* Fluid section spacing */
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  /* Fluid section spacing */
 }
 
 /* Animations */

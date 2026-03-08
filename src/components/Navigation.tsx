@@ -32,7 +32,7 @@ export default function Navigation() {
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                backgroundColor: menuOpen ? 'rgba(244, 245, 247, 0.98)' : 'rgba(244, 245, 247, 0.8)',
+                backgroundColor: menuOpen ? 'rgba(242, 244, 245, 0.98)' : 'rgba(242, 244, 245, 0.8)',
                 backdropFilter: menuOpen ? 'none' : 'blur(10px)',
                 borderBottom: menuOpen ? 'none' : '1px solid var(--surface-border)'
             }}>
@@ -92,7 +92,7 @@ export default function Navigation() {
                     left: 0,
                     width: '100%',
                     height: '100vh',
-                    backgroundColor: 'rgba(244, 245, 247, 0.98)',
+                    backgroundColor: 'rgba(242, 244, 245, 0.98)',
                     zIndex: 999,
                     display: 'flex',
                     flexDirection: 'column',
