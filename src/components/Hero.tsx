@@ -13,7 +13,7 @@ export default function Hero() {
                     <span className={styles.pulseDot}></span>
                     SYSTEM OPERATIONAL
                 </div>
-                <h1 style={{ fontSize: '3rem', color: '#ffffff', fontWeight: 700, lineHeight: 1, textTransform: 'uppercase', letterSpacing: '-0.02em', fontFamily: 'var(--font-sans)', marginBottom: '2rem' }}>
+                <h1 className={styles.title}>
                     INTELLIGENCE <span style={{ color: 'var(--primary)' }}>ENGINE</span>
                 </h1>
                 <p className={styles.subtitle}>

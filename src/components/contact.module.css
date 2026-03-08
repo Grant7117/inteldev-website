@@ -117,14 +117,16 @@
 .form select,
 .form textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 1.125rem 1rem;
+    /* Slightly taller for better touch */
     background-color: transparent;
     border: 1px solid var(--card-border);
     color: var(--card-text);
     font-family: var(--font-sans);
-    font-size: 0.95rem;
-    transition: border-color 0.3s ease;
-    border-radius: 2px;
+    font-size: 1rem;
+    /* Crucial: Must be 16px (1rem) to prevent iOS auto-zoom */
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
 .form input:focus,

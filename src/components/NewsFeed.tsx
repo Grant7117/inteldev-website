@@ -7,83 +7,63 @@ import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 const MOCK_NEWS = [
     {
         id: 1,
-        title: 'FNB Property Barometer: Shifting Tides in High-Density Demand',
-        author: 'John Loos | FNB Property Economist',
-        date: 'Most Recent Publication',
-        category: 'Market Pricing',
-        excerpt: 'John Loos analyzes current buying patterns, tracking exactly how inflation numbers are shifting critical absorption rates away from traditional freestanding assets toward high-density security estates.',
+        title: 'BetterBond February 2026 Brief: Repo Rate Cut Anticipation',
+        author: 'BetterBond Property Index',
+        date: 'Released February 2026',
+        category: 'Macroeconomics',
+        excerpt: 'South Africa enters 2026 with increased momentum. A stronger rand is easing inflation pressure, raising expectations for a repo rate cut as early as March 2026. Home loan applications are up 10.4% from 2024 levels.',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop',
-        link: 'https://www.fnb.co.za/about-fnb/newsroom/index.html'
+        link: 'https://www.betterbond.co.za/property-brief/'
     },
     {
         id: 2,
-        title: 'BetterBond Property Brief: Unlocking Value Under Current Rates',
-        author: 'Dr Roelof Botha | BetterBond',
-        date: 'Monthly Index',
-        category: 'Macroeconomics',
-        excerpt: 'Dr Roelof Botha unpacks macroeconomic metrics, demonstrating the underlying resilience of the South African property market despite prime rate pressures, signaling an imminent upswing in approval ratios.',
+        title: 'FNB Property Barometer: Western Cape Sales Velocity Hits 6-Week Peak',
+        author: 'John Loos | FNB Property Economist',
+        date: 'March 2026 Portfolio',
+        category: 'Regional Analysis',
+        excerpt: 'The Western Cape continues to outpace the national average, with selling times dropping significantly to 6.2 weeks. Activity levels have surged to 7.1/10 as semigration and student demand stabilize.',
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
-        link: 'https://www.betterbond.co.za/news'
+        link: 'https://www.fnb.co.za/about-fnb/newsroom/index.html'
     },
     {
         id: 3,
-        title: 'SAPOA Research: Yield Tracking Across Major DA Metros',
+        title: 'SAPOA Research: Office Vacancies Hit 5-Year Low in Q4 2025',
         author: 'South African Property Owners Association',
-        date: 'Quarterly Report',
-        category: 'Yield Intelligence',
-        excerpt: 'A comprehensive breakdown of commercial and high-density residential yields, highlighting actionable data patterns exclusively monitored across Cape Town, Johannesburg, and Tshwane.',
+        date: 'January 2026 Report',
+        category: 'Commercial Intelligence',
+        excerpt: 'National office vacancy rates have declined to 12.8%, the lowest level since 2020. Retail trading density also recorded a 3.9% year-on-year growth, signaling a robust recovery in high-density nodes.',
         image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop',
         link: 'https://sapoa.org.za/research/'
     },
     {
         id: 4,
-        title: 'South Africa Price Forecasts: Rate Cuts on the Horizon',
-        author: 'The Africanvestor',
-        date: 'Recent Outlook',
-        category: 'Macro Forecasts',
-        excerpt: 'In South Africa, forward-looking indicators and FNB economic forecasts are projecting significant basis point interest rate cuts unfolding by mid-2026, easing pressure on bondholders and spurring new demand.',
+        title: 'The Africanvestor: Stellenbosch & Cape Prime Growth Targets 7%',
+        author: 'The Africanvestor News',
+        date: 'Q1 2026 Outlook',
+        category: 'Investment Forecast',
+        excerpt: 'Prime and lifestyle-driven segments in the Western Cape are projected to record 4-7% capital growth in 2026. Infrastructure improvements and falling interest rates are primary drivers for this resilient performance.',
         image: '',
-        link: 'https://theafricanvestor.com/blogs/news/south-africa-price-forecasts#:~:text=In%20South%20Africa%2C%20the%20FNB,point%20cuts%20by%20mid%2D2026'
+        link: 'https://theafricanvestor.com/blogs/news'
     },
     {
         id: 5,
-        title: 'Western Cape Economic Outlook & Property Investment',
-        author: 'WESGRO',
-        date: 'Regional Tracking',
-        category: 'Investment Corridor',
-        excerpt: 'Cape Town and the Western Cape remain the premier destinations for property development, driven by strong municipal fundamentals, tourism growth, and continuous foreign direct investment.',
+        title: 'Property24: Shifting Demographic Demand for 2026',
+        author: 'Property24 Industry Focus',
+        date: '2026 Market Outlook',
+        category: 'Trend Tracking',
+        excerpt: 'Generation Z and Millennials are becoming the dominant buyer segment, prioritizing off-grid energy solutions and high-density security estates. Historical patterns suggest we are entering a major growth cycle.',
         image: '',
-        link: 'https://www.wesgro.co.za/'
+        link: 'https://www.property24.com/articles'
     },
     {
         id: 6,
-        title: 'Afrimat Construction Index (ACI): Building Sector Activity',
-        author: 'Afrimat Construction Index',
-        date: 'Quarterly Index',
-        category: 'Construction Velocity',
-        excerpt: 'Tracking the underlying health of the construction sector through building materials volume and value indicators, providing an early warning system for development pipeline bottlenecks.',
+        title: 'Wesgro Strategic Outlook: International Inflow Driving Tourism Property',
+        author: 'Wesgro Data Hub',
+        date: '2026-2030 Strategy',
+        category: 'Regional Growth',
+        excerpt: 'Cape Town hosts major international summits in 2026, including Mining Indaba and One Young World. This inflow is directly impacting short-term rental yields and hospitality-related property investments.',
         image: '',
-        link: 'https://www.afrimat.co.za/afrimat-construction-index-aci/'
-    },
-    {
-        id: 7,
-        title: 'What to Expect from the South African Property Market in 2026',
-        author: 'Property24',
-        date: 'Market Forecast',
-        category: 'Property Pulse',
-        excerpt: 'Industry experts predict shifting trends across the South African real estate landscape as we move into 2026, driven by changing buyer demographics and the search for security and lifestyle amenities.',
-        image: '',
-        link: 'https://www.property24.com/articles/what-to-expect-from-the-south-african-property-market-in-2026/32927'
-    },
-    {
-        id: 8,
-        title: 'The Official Property Brief',
-        author: 'BetterBond',
-        date: 'Monthly Index',
-        category: 'Macroeconomics',
-        excerpt: 'Read the comprehensive, regular monthly Property Briefs produced by BetterBond, tracking critical industry metrics, approval rates, and consumer lending health across the national market.',
-        image: '',
-        link: 'https://www.betterbond.co.za/property-brief/'
+        link: 'https://www.wesgro.co.za/'
     }
 ];
 
@@ -94,32 +74,33 @@ export default function NewsFeed({ showContainer = true }: { showContainer?: boo
                 return (
                     <article key={item.id} style={{
                         borderBottom: '1px solid var(--surface-border)',
-                        paddingBottom: '0.5rem',
+                        padding: '1rem 0', /* Better breathing room */
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '0.25rem'
+                        gap: '0.5rem'
                     }}>
-                        <div style={{ fontSize: '0.65rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                             {item.author}
                         </div>
-                        <h3 style={{ fontSize: '0.85rem', color: 'var(--heading)', lineHeight: 1.2, fontFamily: 'var(--font-sans)', cursor: 'pointer' }}>
-                            <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <h3 style={{ fontSize: '1.1rem', color: 'var(--heading)', lineHeight: 1.4, fontFamily: 'var(--font-sans)', cursor: 'pointer' }}>
+                            <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                                 {item.title}
                             </a>
                         </h3>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.1rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginTop: '0.5rem' }}>
                             <a href={item.link} target="_blank" rel="noopener noreferrer" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '0.2rem',
-                                fontWeight: 600,
-                                fontSize: '0.65rem',
+                                gap: '0.4rem',
+                                fontWeight: 700,
+                                fontSize: '0.875rem', /* Increased from 0.65rem */
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em',
                                 color: 'var(--primary)',
-                                transition: 'opacity 0.2s ease'
+                                transition: 'opacity 0.2s ease',
+                                padding: '8px 0' /* Vertical hit area */
                             }}>
-                                Access Report <ExternalLink size={12} />
+                                Access Report <ExternalLink size={14} />
                             </a>
                         </div>
                     </article>
