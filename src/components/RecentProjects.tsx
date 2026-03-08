@@ -23,13 +23,13 @@ const PROJECTS: Project[] = [
         name: 'Cornerstone on Arum',
         status: 'SOLD OUT',
         units: '22 Premium Units',
-        location: 'Table View, Cape Town',
+        location: 'Arum Road, Table View',
         description: 'Cornerstone on Arum sets a benchmark for residential living in Table View. The development offers premium apartments within a secure and well-managed community, designed to deliver long-term value through superior standards of design, sustainability, and comfort.',
         fullDescription: 'Featuring 22 thoughtfully designed one- and two-bedroom units, the project presents an exceptional investment opportunity with modern aesthetics and reinforced structure for long-term durability.',
         image: '/images/Cornerstone-on-arum/hero-image.jpg',
         websiteUrl: 'www.cornerstoneonarum.co.za',
         youtubeVideos: [
-            { label: 'Project Channel', url: 'https://www.youtube.com/@CornerstoneonArum' }
+            { label: 'YouTube', url: 'https://www.youtube.com/@CornerstoneonArum' }
         ],
         year: '2024-2025'
     },
@@ -37,15 +37,14 @@ const PROJECTS: Project[] = [
         id: 'residence-on-north',
         name: 'Residence on North',
         status: 'SOLD',
-        units: '72 Total Units (3 x 24)',
-        location: '38, 40 & 42 North Road',
+        units: '72 units',
+        location: 'North Road, Table View',
         description: 'A landmark development comprising three separate residential buildings of 24 units each. Designed with a New York-inspired aesthetic, featuring top-floor viewing decks and sophisticated outdoor entertainment spaces.',
         fullDescription: 'Each building incorporates premium finishes including GROHE sanitary ware and AEG appliances. The project was engineered for resilience with integrated gas infrastructure and high-specification architectural detailing.',
         image: '/images/Residence-on-north/42-North-Road.png',
         websiteUrl: 'www.theresidenceonnorth.co.za',
         youtubeVideos: [
-            { label: 'Production Video 1', url: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz' },
-            { label: 'Production Video 2', url: 'https://youtu.be/RoRyZSSQB-I?si=vFZistEdDJNU2tUx' }
+            { label: 'YouTube', url: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz' }
         ],
         year: '2023-2024'
     },
@@ -53,10 +52,11 @@ const PROJECTS: Project[] = [
         id: 'north-view-terrace',
         name: 'North View Terrace',
         status: 'SOLD',
-        units: '15 Units',
-        location: 'Table View',
+        units: '14 units',
+        location: 'North View Terrace, Table View',
         description: 'A boutique residential development optimized for the burgeoning Table View market. North View Terrace focused on providing clean architectural lines and high-yield potential for investors.',
         image: '/images/North-View-Terrace/North-view-terrace.jpg',
+        websiteUrl: '',
         year: '2022'
     }
 ];
@@ -92,29 +92,18 @@ export default function RecentProjects() {
                         </div>
 
                         <div className={styles.projectInfo}>
-                            <div className={styles.headerRow}>
-                                <span className={styles.projectNumber}>0{index + 1}</span>
-                                <span className={styles.status}>{project.status}</span>
-                            </div>
-
                             <h3 className={styles.projectName}>{project.name}</h3>
 
                             <p className={styles.description}>
                                 {project.description}
                             </p>
 
-                            <div className={styles.details}>
-                                <div className={styles.detailItem}>
-                                    <span>Scope</span>
-                                    <strong>{project.units}</strong>
+                            <div className={styles.simpleDetails}>
+                                <div className={styles.simpleItem}>
+                                    <span className={styles.detailValue}>{project.units}</span>
                                 </div>
-                                <div className={styles.detailItem}>
-                                    <span>Location</span>
-                                    <strong>{project.location}</strong>
-                                </div>
-                                <div className={styles.detailItem}>
-                                    <span>Year</span>
-                                    <strong>{project.year}</strong>
+                                <div className={styles.simpleItem}>
+                                    <span className={styles.detailValue}>{project.location}</span>
                                 </div>
                             </div>
 
@@ -126,20 +115,20 @@ export default function RecentProjects() {
                                         rel="noopener noreferrer"
                                         className={styles.primeBtn}
                                     >
-                                        <Globe size={16} /> {project.websiteUrl}
+                                        <Globe size={16} /> {project.websiteUrl.toUpperCase()}
                                     </a>
                                 )}
-                                {project.youtubeVideos?.map((video, vIndex) => (
+                                {project.youtubeVideos && project.youtubeVideos.length > 0 && (
                                     <a
-                                        key={vIndex}
-                                        href={video.url}
+                                        href={project.youtubeVideos[0].url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className={styles.secBtn}
+                                        className={styles.ytBtn}
                                     >
-                                        <Youtube size={16} /> {video.label}
+                                        <Youtube size={20} color="#ff0000" fill="#ff0000" />
+                                        <span>YouTube</span>
                                     </a>
-                                ))}
+                                )}
                             </div>
                         </div>
                     </article>

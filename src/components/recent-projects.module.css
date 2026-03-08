@@ -38,8 +38,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
-    align-items: center;
-    /* Better alignment for "straight lines" feel */
+    align-items: flex-start;
+    /* Precise top alignment with image */
 }
 
 .projectCard.reversed {
@@ -53,7 +53,6 @@
 .imageWrapper {
     position: relative;
     border-radius: 2px;
-    /* Sharper architectural edge */
     overflow: hidden;
     aspect-ratio: 3 / 2;
     background-color: var(--background-off);
@@ -77,35 +76,15 @@
     gap: 2.5rem;
 }
 
-.headerRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px solid var(--primary-color);
-    padding-bottom: 1.5rem;
-}
-
-.projectNumber {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    line-height: 1;
-}
-
-.status {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-}
-
 .projectName {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    /* Increased scale for 'Section Title' impact */
     color: var(--heading);
     margin: 0;
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    /* Tight line height for alignment */
 }
 
 .description {
@@ -114,50 +93,39 @@
     color: var(--text-muted);
 }
 
-.details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem 0;
+.simpleDetails {
+    display: flex;
+    gap: 4rem;
+    padding: 1.5rem 0;
     border-top: 1px solid var(--surface-border);
-    border-bottom: 1px solid var(--surface-border);
 }
 
-.detailItem span {
-    display: block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    color: var(--text-muted);
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-
-.detailItem strong {
-    font-size: 1.05rem;
-    color: var(--heading);
+.detailValue {
+    font-size: 1.25rem;
     font-weight: 700;
-    display: block;
+    color: var(--primary-color);
 }
 
 .actions {
     display: flex;
     gap: 1.5rem;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 .primeBtn,
-.secBtn {
+.ytBtn {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.75rem;
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    border-radius: 2px;
+    border-radius: 40px;
+    /* Pill shape for buttons as per annotations */
 }
 
 .primeBtn {
@@ -172,15 +140,15 @@
     transform: translateY(-2px);
 }
 
-.secBtn {
+.ytBtn {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 1px solid rgba(26, 42, 36, 0.2);
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    font-weight: 800;
 }
 
-.secBtn:hover {
-    border-color: var(--accent-color);
-    background-color: var(--background-off);
+.ytBtn:hover {
+    background-color: #fff1f1;
     transform: translateY(-2px);
 }
 
@@ -193,7 +161,7 @@
 @media (max-width: 968px) {
     .projectCard {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 3rem;
     }
 
     .projectCard.reversed {
@@ -208,8 +176,8 @@
         aspect-ratio: 16 / 9;
     }
 
-    .details {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .simpleDetails {
+        gap: 2rem;
+        flex-direction: column;
     }
 }
