@@ -5,57 +5,32 @@ import styles from './recent-projects.module.css';
 interface Project {
     id: string;
     name: string;
-    status: string;
-    units: string;
-    location: string;
     description: string;
-    fullDescription?: string;
     image: string;
     websiteUrl?: string;
-    youtubeVideos?: { label: string; url: string }[];
-    year?: string;
 }
 
 const PROJECTS: Project[] = [
     {
         id: 'cornerstone-on-arum',
         name: 'Cornerstone on Arum',
-        status: 'SOLD OUT',
-        units: '22 Premium Units',
-        location: 'Arum Road, Table View',
-        description: 'Cornerstone on Arum sets a benchmark for residential living in Table View. The development offers premium apartments within a secure and well-managed community, designed to deliver long-term value through superior standards of design, sustainability, and comfort.',
-        fullDescription: 'Featuring 22 thoughtfully designed one- and two-bedroom units, the project presents an exceptional investment opportunity with modern aesthetics and reinforced structure for long-term durability.',
+        description: 'Cornerstone on Arum sets a benchmark for residential living in Table View. The development offers premium apartments within a secure and well-managed community, designed to deliver long-term value through superior standards of design, sustainability, and comfort. Featuring 22 thoughtfully designed one- and two-bedroom units, the project presents an exceptional investment opportunity.',
         image: '/images/Cornerstone-on-arum/hero-image.jpg',
-        websiteUrl: 'www.cornerstoneonarum.co.za',
-        youtubeVideos: [
-            { label: 'YouTube', url: 'https://www.youtube.com/@CornerstoneonArum' }
-        ],
-        year: '2024-2025'
+        websiteUrl: 'www.cornerstoneonarum.co.za'
     },
     {
         id: 'residence-on-north',
         name: 'Residence on North',
-        status: 'SOLD',
-        units: '24 spacious apartments',
-        location: 'North Road, Table View',
-        description: 'Residence on North is a premium residential complex, offering a selection of 24 spacious apartments. The development features a variety of unit types, including studio apartments, one-bedroom units, one-bedroom loft-style apartments, and two-bedroomed residences. Each apartment is designed with comfort and modern living in mind, providing a unique blend of style and functionality.',
+        description: 'Residence on North is a premium complex with 24 spacious apartments, including studios, one-bedroom units, lofts, and two-bedroom options. Designed for comfort and modern living, all apartments offer style and functionality. Three developments of 24 apartments each are located side by side on North Road, Table View.',
         image: '/images/Residence-on-north/42-North-Road.png',
-        websiteUrl: 'www.theresidenceonnorth.co.za',
-        youtubeVideos: [
-            { label: 'YouTube', url: 'https://youtu.be/3_BpAXcjstQ?si=yrEKKuWHJuGOcdQz' }
-        ],
-        year: '2023-2024'
+        websiteUrl: 'www.theresidenceonnorth.co.za'
     },
     {
         id: 'north-view-terrace',
         name: 'North View Terrace',
-        status: 'SOLD',
-        units: '14 units',
-        location: 'North View Terrace, Table View',
-        description: 'A boutique residential development optimized for the burgeoning Table View market. North View Terrace focused on providing clean architectural lines and high-yield potential for investors.',
+        description: 'North View Terrace comprises 15 units, offering a selection of one- and two-bedroom apartments designed to maximize comfort and natural light. Each unit features spacious interiors and private balconies. This development is well-suited for first-time buyers and investors who are interested in affordable and distinctive properties',
         image: '/images/North-View-Terrace/North-view-terrace.jpg',
-        websiteUrl: '',
-        year: '2022'
+        websiteUrl: ''
     }
 ];
 
@@ -89,10 +64,6 @@ export default function RecentProjects() {
                             <p className={styles.description}>
                                 {project.description}
                             </p>
-
-                            <div className={styles.simpleInfo}>
-                                {project.units} , {project.location}
-                            </div>
 
                             <div className={styles.links}>
                                 {project.websiteUrl && (
