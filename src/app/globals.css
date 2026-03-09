@@ -64,16 +64,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 6vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+h4 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   color: var(--heading);
   font-weight: 500;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -84,8 +85,8 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
-  padding: 4px 0;
-  /* Increase vertical hit area for mobile links */
+  padding: 8px 0; /* Enhanced touch target for links */
+  display: inline-block;
 }
 
 button {
@@ -104,8 +105,8 @@ button {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 max(1.5rem, 5%);
-  /* Fluid padding for ultra-responsive gutters */
+  padding: 0 clamp(1rem, 5vw, 2rem); /* Optimized mobile gutters */
+  width: 100%;
 }
 
 .primary-text {
