@@ -48,8 +48,8 @@ export default function RecentProjects() {
                                 width={1200}
                                 height={900}
                                 style={{ objectFit: 'cover' }}
-                                unoptimized
-                                priority={index === 0}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
                             />
                         </div>
 
