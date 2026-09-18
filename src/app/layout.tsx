@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-
 export const metadata: Metadata = {
-  title: 'IntelDev - Intelligent Property Feasibility Engine',
-  description: 'Advanced algorithmic feasibility, macro-economic forensics, and automated executive reporting for the modern property developer.',
+  title: 'INTELDEV | Intelligence Engine - Soon to be the new home',
+  description: 'Soon to be the new home of INTELDEV Intelligence Engine. Next generation intelligence architecture undergoing scheduled platform overhaul.',
+  icons: {
+    icon: '/inteldev-logo.jpg',
+  },
 };
 
 export default function RootLayout({
@@ -16,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <Navigation />
+      <body>
+        <div className="ambient-bg" />
+        <div className="grid-overlay" />
         {children}
-        <Footer />
       </body>
     </html>
   );
