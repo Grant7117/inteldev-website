@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FinancialTicker } from '@/components/ticker/FinancialTicker';
+import { BlaauwbergCorridorSection } from '@/components/corridor/BlaauwbergCorridorSection';
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
           maxWidth: '920px',
           width: '100%',
           margin: 'auto',
-          padding: '2rem 0',
+          padding: '2rem 0 3rem',
         }}
       >
         {/* Main Logo Showcase */}
@@ -249,6 +250,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* The Blaauwberg Road Corridor Statutory Section */}
+      <BlaauwbergCorridorSection />
 
       {/* Footer */}
       <footer
