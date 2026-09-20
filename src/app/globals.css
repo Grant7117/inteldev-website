@@ -123,3 +123,35 @@ html, body {
 .animate-float {
   animation: floatSlow 6s ease-in-out infinite;
 }
+
+/* Ticker Marquee Animations */
+@keyframes tickerMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ticker-track {
+  animation: tickerMarquee 48s linear infinite;
+  will-change: transform;
+}
+
+.ticker-paused {
+  animation-play-state: paused !important;
+}
+
+.ticker-card-btn:hover {
+  background-color: rgba(30, 41, 59, 0.95) !important;
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15), 0 0 12px rgba(56, 189, 248, 0.1);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 768px) {
+  .md-show {
+    display: inline-block !important;
+  }
+}

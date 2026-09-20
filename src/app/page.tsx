@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { FinancialTicker } from '@/components/ticker/FinancialTicker';
 
 export default function Home() {
   return (
@@ -12,12 +13,25 @@ export default function Home() {
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '2.5rem 1.5rem 2rem',
         boxSizing: 'border-box',
       }}
     >
-      {/* Top Status Badge */}
-      <header style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      {/* Top Financial & Regional Intelligence Ticker */}
+      <FinancialTicker />
+
+      {/* Main Content Area */}
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          padding: '2rem 1.5rem 2rem',
+          flex: 1,
+        }}
+      >
+        {/* Top Status Badge */}
+        <header style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
         <div
           style={{
             display: 'inline-flex',
@@ -252,6 +266,7 @@ export default function Home() {
       >
         <span>&copy; {new Date().getFullYear()} INTELDEV Intelligence Engine. All Rights Reserved.</span>
       </footer>
+      </div>
     </main>
   );
 }
