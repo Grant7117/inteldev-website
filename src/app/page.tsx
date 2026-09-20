@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { FinancialTicker } from '@/components/ticker/FinancialTicker';
 import { BlaauwbergCorridorSection } from '@/components/corridor/BlaauwbergCorridorSection';
+import { N7ExpansionSection } from '@/components/corridor/N7ExpansionSection';
 
 export default function Home() {
   return (
@@ -253,6 +254,9 @@ export default function Home() {
 
       {/* The Blaauwberg Road Corridor Statutory Section */}
       <BlaauwbergCorridorSection />
+
+      {/* N7 Expansion & Regional Infrastructure Section */}
+      <N7ExpansionSection />
 
       {/* Footer */}
       <footer
