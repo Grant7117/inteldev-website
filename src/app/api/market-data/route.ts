@@ -39,15 +39,14 @@ export async function GET() {
           zarUsdMetric.lastUpdated = 'Live Interbank Spot';
         }
 
-        // Update Domestic Gold ZAR/g based on spot gold and live USD/ZAR
+        // Update Domestic Gold ZAR/oz based on spot gold and live USD/ZAR
         const goldUsdMetric = metrics.find((m) => m.id === 'gold-spot');
-        const goldZarGMetric = metrics.find((m) => m.id === 'gold-zar-g');
-        if (goldUsdMetric && goldZarGMetric && typeof goldUsdMetric.value === 'number') {
-          // 1 troy ounce = 31.1034768 grams
-          const zarPerGram = (goldUsdMetric.value * zarRate) / 31.1034768;
-          goldZarGMetric.value = Math.round(zarPerGram);
-          goldZarGMetric.displayValue = `R ${Math.round(zarPerGram).toLocaleString()}`;
-          goldZarGMetric.lastUpdated = 'Live Converted Spot';
+        const goldZarOzMetric = metrics.find((m) => m.id === 'gold-zar-oz');
+        if (goldUsdMetric && goldZarOzMetric && typeof goldUsdMetric.value === 'number') {
+          const zarPerOz = goldUsdMetric.value * zarRate;
+          goldZarOzMetric.value = Math.round(zarPerOz);
+          goldZarOzMetric.displayValue = `R ${Math.round(zarPerOz).toLocaleString()}`;
+          goldZarOzMetric.lastUpdated = 'Live Converted Spot';
         }
       }
     }
