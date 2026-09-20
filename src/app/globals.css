@@ -135,7 +135,7 @@ html, body {
 }
 
 .ticker-track {
-  animation: tickerMarquee 48s linear infinite;
+  animation: tickerMarquee 95s linear infinite;
   will-change: transform;
 }
 
