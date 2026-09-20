@@ -131,7 +131,7 @@ export const IgneousPropertySection: React.FC = () => {
                   lineHeight: 1.55,
                 }}
               >
-                {IGNEOUS_DEVELOPER_CONFIG.ethos}
+                Property developers operating in {IGNEOUS_DEVELOPER_CONFIG.operatingHub}.
               </p>
             </div>
           </div>
@@ -195,18 +195,18 @@ export const IgneousPropertySection: React.FC = () => {
                 }}
               >
                 <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#fb7185', display: 'inline-block' }} />
-                ACTIVE ACQUISITION MANDATE
+                LAND ACQUISITION
               </span>
               <span style={{ fontSize: '0.72rem', color: '#f59e0b', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>
-                Immediate Cash Offer & Rapid Due Diligence
+                Blaauwberg Road Corridor & Table View Precincts
               </span>
             </div>
 
             <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff' }}>
-              Actively Purchasing 1,004 m² & 1,007 m² Properties
+              Seeking 1,004 m² & 1,007 m² Properties for Purchase
             </h3>
             <p style={{ fontSize: '0.92rem', color: '#cbd5e1', marginTop: '0.4rem', maxWidth: '880px', lineHeight: '1.6' }}>
-              Igneous Property Development is in active acquisition mode seeking standard suburban erven (specifically ~<strong>1,004 m² and 1,007 m²</strong>) situated along the <strong>Blaauwberg Road Corridor</strong>, North Road, Arum Road, and surrounding Table View / Blouberg precincts for immediate high-density sectional title redevelopment under the approved LSDF.
+              Igneous Property Development is actively looking to acquire standard suburban erven (specifically ~<strong>1,004 m² and 1,007 m²</strong>) situated along the <strong>Blaauwberg Road Corridor</strong>, North Road, Arum Road, and surrounding Table View / Blouberg areas.
             </p>
           </div>
         </div>
@@ -225,38 +225,31 @@ export const IgneousPropertySection: React.FC = () => {
           }}
         >
           <div>
-            <div style={{ fontSize: '0.68rem', color: '#94a3b8', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>TARGET ERF SIZE</div>
+            <div style={{ fontSize: '0.68rem', color: '#94a3b8', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>TARGET ERF SIZES</div>
             <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#f59e0b', fontFamily: 'var(--font-mono)', marginTop: '0.2rem' }}>
               1,004 m² & 1,007 m²
             </div>
           </div>
 
           <div>
-            <div style={{ fontSize: '0.68rem', color: '#94a3b8', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>TARGET PRECINCT</div>
+            <div style={{ fontSize: '0.68rem', color: '#94a3b8', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>PRIMARY FOCUS AREA</div>
             <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#ffffff', fontFamily: 'var(--font-mono)', marginTop: '0.2rem' }}>
-              Blaauwberg Corridor
+              Blaauwberg Road Corridor
             </div>
           </div>
 
           <div>
-            <div style={{ fontSize: '0.68rem', color: '#94a3b8', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>ZONING TARGET</div>
+            <div style={{ fontSize: '0.68rem', color: '#94a3b8', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>PRECINCTS</div>
             <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#38bdf8', fontFamily: 'var(--font-mono)', marginTop: '0.2rem' }}>
-              GR3 / GR4 / SR1 Infill
-            </div>
-          </div>
-
-          <div>
-            <div style={{ fontSize: '0.68rem', color: '#94a3b8', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>DEAL STRUCTURE</div>
-            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#34d399', fontFamily: 'var(--font-mono)', marginTop: '0.2rem' }}>
-              Cash Purchase / JV
+              Table View & Blouberg
             </div>
           </div>
         </div>
 
-        {/* Quick Property Submission Form */}
+        {/* Property Submission / Inquiry Form */}
         <form onSubmit={handleSubmitInquiry} style={{ marginTop: '1rem' }}>
           <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#f8fafc', marginBottom: '0.6rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>
-            Direct Property Owner / Broker Submission:
+            Property Submission / Acquisition Inquiry:
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem', marginBottom: '0.75rem' }}>
@@ -305,15 +298,14 @@ export const IgneousPropertySection: React.FC = () => {
                 fontFamily: 'var(--font-sans)',
               }}
             >
-              <option value="1004">~1,004 m² Standard Erf</option>
-              <option value="1007">~1,007 m² Standard Erf</option>
-              <option value="1000-1500">1,000 m² – 1,500 m²</option>
-              <option value="1500+">1,500 m²+ Consolidated</option>
+              <option value="1004">~1,004 m²</option>
+              <option value="1007">~1,007 m²</option>
+              <option value="other">Other Size</option>
             </select>
 
             <input
               type="tel"
-              placeholder="Owner / Broker Contact Phone"
+              placeholder="Contact Number"
               value={contactNumber}
               onChange={(e) => setContactNumber(e.target.value)}
               style={{
@@ -344,12 +336,17 @@ export const IgneousPropertySection: React.FC = () => {
                 fontFamily: 'var(--font-mono)',
               }}
             >
-              Submit Property for Direct Cash Offer
+              Submit Property Details
             </button>
 
-            <span style={{ fontSize: '0.78rem', color: '#94a3b8', fontFamily: 'var(--font-mono)' }}>
-              Direct Line: <strong style={{ color: '#f8fafc' }}>acquisitions@igneousproperty.co.za</strong>
-            </span>
+            <a
+              href={IGNEOUS_DEVELOPER_CONFIG.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: '0.78rem', color: '#94a3b8', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}
+            >
+              Official Portal: <strong style={{ color: '#f8fafc' }}>www.igneousproperty.co.za ↗</strong>
+            </a>
           </div>
 
           {submissionFeedback && (

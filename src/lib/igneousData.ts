@@ -17,10 +17,6 @@ export interface PropertyProject {
 export interface LandAcquisitionCriteria {
   targetErfSizes: string[];
   targetLocations: string[];
-  preferredZonings: string[];
-  mandateType: string;
-  closingSpeed: string;
-  contactEmail: string;
   contactWebsite: string;
 }
 
@@ -28,8 +24,6 @@ export const IGNEOUS_DEVELOPER_CONFIG = {
   name: 'Igneous Property Development',
   websiteUrl: 'https://www.igneousproperty.co.za',
   operatingHub: 'Table View & Blouberg, Cape Town',
-  ethos:
-    'Pioneering premium, high-yield sectional title developments with architectural distinction, sustainable finishes, and transit-aligned spatial efficiency in the Western Cape.',
 };
 
 export const IGNEOUS_PROJECTS: PropertyProject[] = [
@@ -40,18 +34,15 @@ export const IGNEOUS_PROJECTS: PropertyProject[] = [
     suburb: 'Table View, Cape Town',
     status: 'LAUNCHING_SOON',
     statusBadge: 'READY FOR LAUNCH IN 1 MONTH',
-    timeline: 'Launch Target: October 2026',
     image: '/cornerstone-on-north.jpg',
     projectUrl: 'https://www.igneousproperty.co.za',
     description:
-      'Premier upcoming sectional title residential development located at 17 North Road, meticulously engineered for high capital growth, modern lifestyle aesthetics, and superior rental yields.',
-    typology: 'High-End Sectional Title Residential Apartments',
-    units: 'Bespoke Luxury Units',
+      'Upcoming sectional title development located at 17 North Road, Table View. Scheduled for official launch in 1 month.',
+    typology: 'Sectional Title Residential Development',
     highlights: [
-      'Prime Table View location within walking distance of MyCiTi transport corridors',
-      'Contemporary architecture with premium high-spec finishes and secure perimeter access',
-      'High-yield investment profile optimized for both owner-occupiers and institutional buy-to-let portfolios',
-      'Launching in 1 month — pre-launch registrations opening shortly',
+      'Prime Table View location on North Road',
+      'Contemporary architecture and high-spec finishes',
+      'Launching in 1 month',
     ],
   },
   {
@@ -59,49 +50,42 @@ export const IGNEOUS_PROJECTS: PropertyProject[] = [
     name: 'Cornerstone-on-Arum',
     address: '154 Arum Road',
     suburb: 'Table View, Cape Town',
-    status: 'ESTABLISHED',
-    statusBadge: 'COMPLETED & ESTABLISHED',
+    status: 'COMPLETED',
+    statusBadge: 'COMPLETED',
     image: '/cornerstone-on-arum.jpg',
     projectUrl: 'https://www.cornerstoneonarum.co.za',
     description:
-      'The flagship Cornerstone-on-Arum development at 154 Arum Road stands as a benchmark for contemporary sectional title living in Table View, boasting exceptional build quality and strong asset appreciation.',
-    typology: 'Sectional Title Residential Complex',
+      'Completed residential development located at 154 Arum Road, Table View.',
+    typology: 'Sectional Title Residential Development',
     highlights: [
-      'Established high-demand residential complex with 100% occupancy history',
-      'Architectural benchmark in the Table View residential precinct',
-      'Proven capital growth and steady rental escalation track record',
+      'Established sectional title development',
+      'Prime Table View location on Arum Road',
     ],
   },
   {
     id: 'north-road-portfolio',
-    name: 'North Road Residential Enclave',
+    name: '38, 40 & 42 North Road',
     address: '38, 40 & 42 North Road',
     suburb: 'Table View, Cape Town',
     status: 'COMPLETED',
-    statusBadge: 'DELIVERED PORTFOLIO',
+    statusBadge: 'COMPLETED',
     projectUrl: 'https://www.igneousproperty.co.za',
     description:
-      'Contiguous multi-erf residential development cluster at 38, 40, and 42 North Road, demonstrating Igneous Property Development’s capability in site consolidation and precinct revitalization.',
-    typology: 'Multi-Erf Residential Development',
+      'Completed property development footprint across 38, 40, and 42 North Road in Table View.',
+    typology: 'Residential Property Development',
     highlights: [
-      'Delivered across multiple adjacent sites along the North Road growth axis',
-      'Exemplifies high-density urban infill and premium craftsmanship',
-      'Direct connectivity to Blaauwberg Road and Table View retail hubs',
+      'Developed across 38, 40, and 42 North Road',
+      'Table View residential precinct',
     ],
   },
 ];
 
 export const LAND_ACQUISITION_CRITERIA: LandAcquisitionCriteria = {
-  targetErfSizes: ['1,004 m²', '1,007 m²', '1,000 m² – 1,050 m² Standard Erven'],
+  targetErfSizes: ['1,004 m²', '1,007 m²'],
   targetLocations: [
-    'Blaauwberg Road Corridor (Table View)',
+    'Blaauwberg Road Corridor',
     'North Road & Arum Road Precincts',
-    'Bloubergstrand & West Beach Buffer Nodes',
-    'Sandown & Sunningdale Growth Corridors',
+    'Table View & Blouberg',
   ],
-  preferredZonings: ['General Residential (GR3 / GR4 / GR5)', 'Single Residential (SR1 with Densification / Rezoning Potential)', 'General Business (GB1 / GB4)', 'Mixed Use (MU2)'],
-  mandateType: 'Direct Cash Acquisition / Joint Venture Partnership',
-  closingSpeed: 'Rapid Institutional Due Diligence & Guaranteed Settlement',
-  contactEmail: 'acquisitions@igneousproperty.co.za',
   contactWebsite: 'https://www.igneousproperty.co.za',
 };
