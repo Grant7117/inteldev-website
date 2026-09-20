@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FinancialTicker } from '@/components/ticker/FinancialTicker';
 import { BlaauwbergCorridorSection } from '@/components/corridor/BlaauwbergCorridorSection';
 import { N7ExpansionSection } from '@/components/corridor/N7ExpansionSection';
+import { IgneousPropertySection } from '@/components/corridor/IgneousPropertySection';
 import { JsonLdSchema } from '@/components/seo/JsonLdSchema';
 
 export default function Home() {
@@ -261,6 +262,9 @@ export default function Home() {
 
       {/* N7 Expansion & Regional Infrastructure Section */}
       <N7ExpansionSection />
+
+      {/* Igneous Property Development & Active Acquisition Section */}
+      <IgneousPropertySection />
 
       {/* Footer */}
       <footer
