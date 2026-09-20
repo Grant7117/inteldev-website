@@ -1,0 +1,32 @@
+name: Google Alerts & Statutory Ingestion for N7 Expansion
+
+on:
+  schedule:
+    # Runs daily at 05:00 UTC (07:00 SAST)
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  ingest-n7-alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Google Alert Ingestion & Whitelist Filter
+        run: |
+          python scripts/ingest_google_alerts.py
+
+      - name: Commit and push updated alerts manifest
+        run: |
+          git config --local user.email "bot@inteldev.co.za"
+          git config --local user.name "IntelDev Alerts Ingestion Bot"
+          git add src/lib/n7AlertsManifest.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(alerts): automated Google Alert statutory ingestion sync [skip ci]" && git push origin develop)

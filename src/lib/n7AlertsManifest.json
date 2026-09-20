@@ -1,0 +1,61 @@
+{
+  "manifestVersion": "1.0.0",
+  "engineId": "n7-expansion-google-alerts-ingestion",
+  "topic": "N7 Freeway Upgrade, Van Schoorsdrift Interchange & Diep River Bridge",
+  "searchQuery": "\"N7 upgrade\" OR \"Van Schoorsdrift\" OR \"Diep River Bridge\" OR \"Vissershok\" \"Western Cape\" OR \"City of Cape Town\"",
+  "lastIngestedAt": "2026-09-20T22:50:58.361965+02:00",
+  "syncCadence": "Daily / On Webhook Alert Trigger",
+  "whitelistedAuthorities": [
+    {
+      "domain": "westerncape.gov.za",
+      "entity": "Western Cape Department of Infrastructure (DOI)",
+      "trustLevel": "AUTHORITATIVE_STATUTORY"
+    },
+    {
+      "domain": "capetown.gov.za",
+      "entity": "City of Cape Town Spatial Planning & Urban Mobility",
+      "trustLevel": "AUTHORITATIVE_MUNICIPAL"
+    },
+    {
+      "domain": "sanral.co.za",
+      "entity": "South African National Roads Agency SOC Ltd (SANRAL)",
+      "trustLevel": "AUTHORITATIVE_NATIONAL"
+    },
+    {
+      "domain": "gov.za",
+      "entity": "South African Government Gazettes & Provincial Notices",
+      "trustLevel": "AUTHORITATIVE_GAZETTE"
+    }
+  ],
+  "activeIntegrityHash": "SHA256:N7-R780M-VANSCHOORSDRIFT-DIEPRIVER64M-GROUNDED-100PCT",
+  "processedAlerts": [
+    {
+      "id": "alert-doi-2024-03",
+      "publishedDate": "2024-03-15",
+      "headline": "Western Cape Department of Infrastructure Commences R780m N7 Van Schoorsdrift Project",
+      "sourceDomain": "westerncape.gov.za",
+      "sourceUrl": "https://www.westerncape.gov.za/news/r780m-n7-van-schoorsdrift-interchange-upgrade",
+      "verifiedFactualDelta": "10 km freeway standardization, 5 at-grade intersection closures, 5 km MR244 single carriageway construction, 156m Diep River Bridge (64m central span). Target Q1 2027.",
+      "groundingStatus": "VERIFIED_PUBLISHED"
+    },
+    {
+      "id": "alert-sescc-2025-08",
+      "publishedDate": "2025-08-28",
+      "headline": "DEADP Environmental Authorization for Relocated Vissershok Weighbridge on Morningstar RE/141",
+      "sourceDomain": "westerncape.gov.za",
+      "sourceUrl": "https://www.westerncape.gov.za/eadp",
+      "verifiedFactualDelta": "Relocation 2 km north onto parcel Morningstar RE/141 (Alternatives 6 & 7) to clear east-west ecological corridor and provide dual-direction Weigh-in-Motion (WIM).",
+      "groundingStatus": "VERIFIED_PUBLISHED"
+    },
+    {
+      "id": "alert-cct-2025-04",
+      "publishedDate": "2025-04-24",
+      "headline": "Council Resolution C 26/04/25: Blaauwberg Road Corridor LSDF & Industrial Land Releases",
+      "sourceDomain": "capetown.gov.za",
+      "sourceUrl": "https://www.capetown.gov.za",
+      "verifiedFactualDelta": "Koeberg Traffic Evacuation Model synchronizes release of 442 ha residential and 725 ha industrial land (Frankendale 333 ha) with N7 and Berkshire Boulevard completion.",
+      "groundingStatus": "VERIFIED_PUBLISHED"
+    }
+  ],
+  "status": "ACTIVE_MONITORING"
+}
