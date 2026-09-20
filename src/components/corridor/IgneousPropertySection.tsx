@@ -402,13 +402,13 @@ export const IgneousPropertySection: React.FC = () => {
                 }}
               >
                 <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.4rem' }}>
                     <span
                       style={{
                         fontSize: '0.68rem',
                         fontWeight: 700,
-                        padding: '0.2rem 0.55rem',
-                        borderRadius: '4px',
+                        padding: '0.25rem 0.6rem',
+                        borderRadius: '6px',
                         backgroundColor: isLaunchingSoon ? 'rgba(245, 158, 11, 0.2)' : 'rgba(56, 189, 248, 0.12)',
                         color: isLaunchingSoon ? '#f59e0b' : '#38bdf8',
                         border: isLaunchingSoon ? '1px solid rgba(245, 158, 11, 0.4)' : '1px solid rgba(56, 189, 248, 0.25)',
@@ -424,6 +424,42 @@ export const IgneousPropertySection: React.FC = () => {
                       </span>
                     )}
                   </div>
+
+                  {project.image && (
+                    <div
+                      style={{
+                        position: 'relative',
+                        width: '100%',
+                        height: '210px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        marginBottom: '1rem',
+                        backgroundColor: '#0a0f1d',
+                        border: isLaunchingSoon ? '1px solid rgba(245, 158, 11, 0.3)' : '1px solid rgba(255, 255, 255, 0.1)',
+                      }}
+                    >
+                      <Image
+                        src={project.image}
+                        alt={`${project.name} - ${project.address}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                          objectFit: 'cover',
+                          transition: 'transform 0.4s ease',
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          height: '50px',
+                          background: 'linear-gradient(to top, rgba(12, 18, 32, 0.95), transparent)',
+                        }}
+                      />
+                    </div>
+                  )}
 
                   <h4 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.25rem' }}>
                     {project.name}
@@ -448,24 +484,36 @@ export const IgneousPropertySection: React.FC = () => {
                   </div>
                 </div>
 
-                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '0.85rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '0.85rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
                   <span style={{ fontSize: '0.75rem', color: '#64748b', fontFamily: 'var(--font-mono)' }}>
                     {project.typology}
                   </span>
 
                   <a
-                    href={IGNEOUS_DEVELOPER_CONFIG.websiteUrl}
+                    href={project.projectUrl || IGNEOUS_DEVELOPER_CONFIG.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.3rem',
                       fontSize: '0.78rem',
                       fontWeight: 700,
-                      color: '#f59e0b',
+                      color: isLaunchingSoon ? '#f59e0b' : '#38bdf8',
                       textDecoration: 'none',
                       fontFamily: 'var(--font-mono)',
+                      padding: '0.35rem 0.65rem',
+                      borderRadius: '6px',
+                      backgroundColor: isLaunchingSoon ? 'rgba(245, 158, 11, 0.12)' : 'rgba(56, 189, 248, 0.08)',
+                      border: isLaunchingSoon ? '1px solid rgba(245, 158, 11, 0.3)' : '1px solid rgba(56, 189, 248, 0.2)',
                     }}
                   >
-                    View on Igneous ↗
+                    <span>
+                      {project.projectUrl?.includes('cornerstoneonarum')
+                        ? 'cornerstoneonarum.co.za'
+                        : 'igneousproperty.co.za'}
+                    </span>
+                    <span>↗</span>
                   </a>
                 </div>
               </div>

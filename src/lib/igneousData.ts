@@ -6,6 +6,8 @@ export interface PropertyProject {
   status: 'LAUNCHING_SOON' | 'COMPLETED' | 'ESTABLISHED';
   statusBadge: string;
   timeline?: string;
+  image?: string;
+  projectUrl?: string;
   description: string;
   typology: string;
   units?: string;
@@ -39,6 +41,8 @@ export const IGNEOUS_PROJECTS: PropertyProject[] = [
     status: 'LAUNCHING_SOON',
     statusBadge: 'READY FOR LAUNCH IN 1 MONTH',
     timeline: 'Launch Target: October 2026',
+    image: '/cornerstone-on-north.jpg',
+    projectUrl: 'https://www.igneousproperty.co.za',
     description:
       'Premier upcoming sectional title residential development located at 17 North Road, meticulously engineered for high capital growth, modern lifestyle aesthetics, and superior rental yields.',
     typology: 'High-End Sectional Title Residential Apartments',
@@ -57,6 +61,8 @@ export const IGNEOUS_PROJECTS: PropertyProject[] = [
     suburb: 'Table View, Cape Town',
     status: 'ESTABLISHED',
     statusBadge: 'COMPLETED & ESTABLISHED',
+    image: '/cornerstone-on-arum.jpg',
+    projectUrl: 'https://www.cornerstoneonarum.co.za',
     description:
       'The flagship Cornerstone-on-Arum development at 154 Arum Road stands as a benchmark for contemporary sectional title living in Table View, boasting exceptional build quality and strong asset appreciation.',
     typology: 'Sectional Title Residential Complex',
@@ -73,6 +79,7 @@ export const IGNEOUS_PROJECTS: PropertyProject[] = [
     suburb: 'Table View, Cape Town',
     status: 'COMPLETED',
     statusBadge: 'DELIVERED PORTFOLIO',
+    projectUrl: 'https://www.igneousproperty.co.za',
     description:
       'Contiguous multi-erf residential development cluster at 38, 40, and 42 North Road, demonstrating Igneous Property Development’s capability in site consolidation and precinct revitalization.',
     typology: 'Multi-Erf Residential Development',
