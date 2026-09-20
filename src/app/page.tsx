@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FinancialTicker } from '@/components/ticker/FinancialTicker';
 import { BlaauwbergCorridorSection } from '@/components/corridor/BlaauwbergCorridorSection';
 import { N7ExpansionSection } from '@/components/corridor/N7ExpansionSection';
+import { JsonLdSchema } from '@/components/seo/JsonLdSchema';
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
         boxSizing: 'border-box',
       }}
     >
+      {/* Structured Data Graph for AI & Search Engine Optimization */}
+      <JsonLdSchema />
+
       {/* Top Financial & Regional Intelligence Ticker */}
       <FinancialTicker />
 
