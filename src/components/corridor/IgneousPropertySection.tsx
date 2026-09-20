@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import {
   IGNEOUS_DEVELOPER_CONFIG,
   IGNEOUS_PROJECTS,
@@ -84,30 +85,55 @@ export const IgneousPropertySection: React.FC = () => {
           </span>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', width: '100%', flexWrap: 'wrap', gap: '1rem' }}>
-          <div>
-            <h2
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', flexWrap: 'wrap', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            {/* Logo Image Showcase */}
+            <div
               style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)',
-                fontWeight: 800,
-                lineHeight: 1.2,
-                letterSpacing: '-0.02em',
-                color: '#ffffff',
-                marginBottom: '0.6rem',
+                position: 'relative',
+                width: '100px',
+                height: '100px',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                backgroundColor: '#0c1220',
+                border: '1px solid rgba(245, 158, 11, 0.35)',
+                boxShadow: '0 10px 25px rgba(245, 158, 11, 0.2)',
+                flexShrink: 0,
               }}
             >
-              {IGNEOUS_DEVELOPER_CONFIG.name}
-            </h2>
-            <p
-              style={{
-                fontSize: '1rem',
-                color: '#94a3b8',
-                maxWidth: '820px',
-                lineHeight: 1.6,
-              }}
-            >
-              {IGNEOUS_DEVELOPER_CONFIG.ethos}
-            </p>
+              <Image
+                src="/igneous-logo-3d.jpg"
+                alt="Igneous Property Development Logo"
+                fill
+                sizes="100px"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+
+            <div>
+              <h2
+                style={{
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)',
+                  fontWeight: 800,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.02em',
+                  color: '#ffffff',
+                  marginBottom: '0.4rem',
+                }}
+              >
+                {IGNEOUS_DEVELOPER_CONFIG.name}
+              </h2>
+              <p
+                style={{
+                  fontSize: '0.96rem',
+                  color: '#94a3b8',
+                  maxWidth: '720px',
+                  lineHeight: 1.55,
+                }}
+              >
+                {IGNEOUS_DEVELOPER_CONFIG.ethos}
+              </p>
+            </div>
           </div>
 
           <a
