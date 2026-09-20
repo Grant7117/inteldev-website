@@ -1,0 +1,32 @@
+name: Weekly City of Cape Town Statutory Ingestion & GEM Sync
+
+on:
+  schedule:
+    # Runs every Monday at 06:00 UTC (08:00 SAST)
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  sync-blaauwberg-corridor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run City of Cape Town Statutory Scraper
+        run: |
+          python scripts/sync_blaauwberg_corridor.py
+
+      - name: Commit and push updated statutory manifest
+        run: |
+          git config --local user.email "bot@inteldev.co.za"
+          git config --local user.name "IntelDev Statutory Sync Bot"
+          git add src/lib/blaauwbergSyncManifest.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(sync): automated weekly City of Cape Town statutory manifest sync [skip ci]" && git push origin develop)
